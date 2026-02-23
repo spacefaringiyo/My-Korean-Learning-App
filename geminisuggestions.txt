@@ -1,0 +1,16 @@
+Korean Learning App - UI/UX & Feature Suggestions
+
+1. Spaced Repetition System (SRS) integration:
+Instead of just static lists, add a "Mark as Learned" or "Needs Review" button to phrases. The app can then hide known phrases and prioritize resurfacing hard ones, maximizing learning efficiency without manually scrolling.
+
+2. Audio Support (Text-to-Speech / MP3s):
+Integrate native browser Text-to-Speech (Web Speech API) for zero-cost, instant audio playback of phrases and words. Alternatively, load custom .mp3 voice lines for ultra-high quality listening practice. Adding a sleek "Play Audio" icon next to the phrase number.
+
+3. Fuzzy Search / Filter Box:
+Add a sleek floating or fixed search bar at the top of the left pane. You can type in English, Japanese, or Korean to instantly filter the list of phrases in the database.
+
+4. Progress Dashboard:
+A simple toggle screen that shows stats like "Words Learned: 24/150", or "Verbs encountered: 40%". Seeing numbers go up is highly motivating for continuous learning grinds.
+
+5. Keyboard Shortcuts:
+Implement global shortcuts (e.g., Left/Right arrows for pagination, Spacebar to play audio, 'S' to focus search) to make navigating the app lightning-fast for power users.
