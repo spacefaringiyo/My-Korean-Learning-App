@@ -818,3 +818,210 @@ body {
     color: var(--text-muted);
     font-size: 1.05rem;
 }
+
+/* ==========================================
+   HUB SCREEN (Playlist Selection)
+   ========================================== */
+.hub-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    overflow-y: auto;
+    background: radial-gradient(ellipse at top, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+}
+
+.hub-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hub-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0 0 0.75rem 0;
+    background: linear-gradient(135deg, #60a5fa, #c084fc, #f472b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.hub-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem 0;
+}
+
+.hub-lang-toggle {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.hub-lang-toggle .toggle-btn {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.85rem;
+}
+
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.hub-card {
+    background: var(--panel-bg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hub-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #60a5fa, #c084fc);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hub-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.5);
+}
+
+.hub-card:hover::before {
+    opacity: 1;
+}
+
+.hub-card-theme {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.hub-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    color: var(--text-main);
+}
+
+.hub-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hub-card-difficulty {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.hub-card-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+.hub-empty {
+    text-align: center;
+    color: var(--text-muted);
+    margin-top: 3rem;
+    font-size: 1.1rem;
+}
+
+.hub-empty code {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   LOADING SCREEN
+   ========================================== */
+.loading-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-text {
+    color: #f87171;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   BACK TO HUB BUTTON
+   ========================================== */
+.back-to-hub-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.back-to-hub-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+/* ==========================================
+   MODULE META BADGE (sidebar)
+   ========================================== */
+.module-meta-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.module-meta-badge span:first-child {
+    font-weight: 600;
+}

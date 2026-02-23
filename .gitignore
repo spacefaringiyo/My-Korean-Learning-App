@@ -26,3 +26,7 @@ dist-ssr
 # project related
 personal_readme.txt
 how2maintain.txt
+how2usegit.txt
+
+# compiled data (generated from src/data/raw_modules/*.yaml)
+public/data/

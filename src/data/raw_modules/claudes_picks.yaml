@@ -1,0 +1,489 @@
+id: claudes_picks
+title: Claude's Picks
+theme: Thoughts & Feelings
+difficulty: Intermediate
+
+phrases:
+  - id: p1
+    translations:
+      en:
+        intent: "I want to understand the world better."
+        literal: "I want to know the world more."
+      ja:
+        intent: "もっと世界のことを知りたい。"
+        literal: "世界をもっとよく知りたいです。"
+    blocks:
+      - id: p1_b1
+        surface: "세상을"
+        dictionary: "세상"
+        type: noun
+        meanings:
+          en: "the world"
+          ja: "世界 / 世の中"
+        grammar_notes:
+          en: "세상 (world) + 을 (object particle)"
+          ja: "세상 (世界) + 을 (〜を)"
+        space_after: true
+      - id: p1_b2
+        surface: "더"
+        dictionary: "더"
+        type: adverb
+        meanings:
+          en: "more"
+          ja: "もっと"
+        space_after: true
+      - id: p1_b3
+        surface: "알고"
+        dictionary: "알다"
+        type: verb
+        meanings:
+          en: "to know / to understand"
+          ja: "知る / 分かる"
+        grammar_notes:
+          en: "알다 + 고 싶다 (want to)"
+          ja: "알다 + 고 싶다 (〜したい)"
+        space_after: true
+      - id: p1_b4
+        surface: "싶어요"
+        dictionary: "싶다"
+        type: verb
+        meanings:
+          en: "to want"
+          ja: "〜したい"
+        grammar_notes:
+          en: "싶다 + 어요 (polite ending)"
+          ja: "싶다 + 어요 (丁寧な語尾)"
+        space_after: false
+
+  - id: p2
+    translations:
+      en:
+        intent: "Words have more power than you think."
+        literal: "Words have more strength than you think."
+      ja:
+        intent: "言葉にはあなたが思う以上の力があるよ。"
+        literal: "言葉は考えるよりもっと大きな力があります。"
+    blocks:
+      - id: p2_b1
+        surface: "말은"
+        dictionary: "말"
+        type: noun
+        meanings:
+          en: "words / language / speech"
+          ja: "言葉 / 話"
+        grammar_notes:
+          en: "말 (words) + 은 (topic particle)"
+          ja: "말 (言葉) + 은 (〜は)"
+        space_after: true
+      - id: p2_b2
+        surface: "생각보다"
+        dictionary: "생각"
+        type: noun
+        meanings:
+          en: "than you think / more than expected"
+          ja: "思ったより / 考えより"
+        grammar_notes:
+          en: "생각 (thought) + 보다 (than/compared to)"
+          ja: "생각 (考え) + 보다 (〜より)"
+        space_after: true
+      - id: p2_b3
+        surface: "큰"
+        dictionary: "크다"
+        type: adjective
+        meanings:
+          en: "big / great"
+          ja: "大きい"
+        grammar_notes:
+          en: "크다 + ㄴ (noun modifier for adjective)"
+          ja: "크다 + ㄴ (連体形)"
+        space_after: true
+      - id: p2_b4
+        surface: "힘이"
+        dictionary: "힘"
+        type: noun
+        meanings:
+          en: "power / strength"
+          ja: "力"
+        grammar_notes:
+          en: "힘 (power) + 이 (subject particle)"
+          ja: "힘 (力) + 이 (主語マーカー)"
+        space_after: true
+      - id: p2_b5
+        surface: "있어요"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          en: "to exist / there is"
+          ja: "ある / いる"
+        space_after: false
+
+  - id: p3
+    translations:
+      en:
+        intent: "I'm curious about everything."
+        literal: "Everything is curious to me."
+      ja:
+        intent: "何でも気になるんだよね。"
+        literal: "全部が気になります。"
+    blocks:
+      - id: p3_b1
+        surface: "뭐든지"
+        dictionary: "뭐든지"
+        type: pronoun
+        meanings:
+          en: "everything / anything"
+          ja: "何でも"
+        grammar_notes:
+          en: "뭐 (what) + 든지 (ever/regardless)"
+          ja: "뭐 (何) + 든지 (〜でも)"
+        space_after: true
+      - id: p3_b2
+        surface: "궁금해요"
+        dictionary: "궁금하다"
+        type: adjective
+        meanings:
+          en: "to be curious / to wonder"
+          ja: "気になる / 知りたい"
+        space_after: false
+
+  - id: p4
+    translations:
+      en:
+        intent: "Let's think about it together."
+        literal: "Let's think about it together."
+      ja:
+        intent: "一緒に考えよう。"
+        literal: "一緒に考えましょう。"
+    blocks:
+      - id: p4_b1
+        surface: "같이"
+        dictionary: "같이"
+        type: adverb
+        meanings:
+          en: "together"
+          ja: "一緒に"
+        space_after: true
+      - id: p4_b2
+        surface: "생각해"
+        dictionary: "생각하다"
+        type: verb
+        meanings:
+          en: "to think"
+          ja: "考える"
+        grammar_notes:
+          en: "생각 (thought) + 하다 (to do)"
+          ja: "생각 (考え) + 하다 (する)"
+        space_after: true
+      - id: p4_b3
+        surface: "봐요"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          en: "to try (auxiliary verb)"
+          ja: "〜してみる (補助動詞)"
+        grammar_notes:
+          en: "~해 보다 means 'to try doing'. 봐요 is polite form."
+          ja: "〜해 보다 は「〜してみる」の意味。봐요 は丁寧形。"
+        space_after: false
+
+  - id: p5
+    translations:
+      en:
+        intent: "Every language has its own beauty."
+        literal: "Each language has its own charm."
+      ja:
+        intent: "どの言語にもそれぞれの美しさがある。"
+        literal: "それぞれの言語にはそれぞれの魅力があります。"
+    blocks:
+      - id: p5_b1
+        surface: "각"
+        dictionary: "각"
+        type: noun
+        meanings:
+          en: "each / every"
+          ja: "各 / それぞれ"
+        space_after: true
+      - id: p5_b2
+        surface: "언어에는"
+        dictionary: "언어"
+        type: noun
+        meanings:
+          en: "language"
+          ja: "言語"
+        grammar_notes:
+          en: "언어 (language) + 에 (at/in) + 는 (topic)"
+          ja: "언어 (言語) + 에 (〜に) + 는 (〜は)"
+        space_after: true
+      - id: p5_b3
+        surface: "각자의"
+        dictionary: "각자"
+        type: noun
+        meanings:
+          en: "its own / individual"
+          ja: "それぞれの / 各自の"
+        grammar_notes:
+          en: "각자 (each person) + 의 (possessive)"
+          ja: "각자 (各自) + 의 (〜の)"
+        space_after: true
+      - id: p5_b4
+        surface: "매력이"
+        dictionary: "매력"
+        type: noun
+        meanings:
+          en: "charm / beauty / appeal"
+          ja: "魅力"
+        grammar_notes:
+          en: "매력 (charm) + 이 (subject particle)"
+          ja: "매력 (魅力) + 이 (主語マーカー)"
+        space_after: true
+      - id: p5_b5
+        surface: "있어요"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          en: "to exist / there is"
+          ja: "ある / いる"
+        space_after: false
+
+  - id: p6
+    translations:
+      en:
+        intent: "I think mistakes are actually precious."
+        literal: "I think mistakes are rather precious."
+      ja:
+        intent: "失敗はむしろ大切だと思う。"
+        literal: "間違いはかえって大切だと思います。"
+    blocks:
+      - id: p6_b1
+        surface: "실수는"
+        dictionary: "실수"
+        type: noun
+        meanings:
+          en: "mistake / error"
+          ja: "失敗 / 間違い"
+        grammar_notes:
+          en: "실수 (mistake) + 는 (topic particle)"
+          ja: "실수 (失敗) + 는 (〜は)"
+        space_after: true
+      - id: p6_b2
+        surface: "오히려"
+        dictionary: "오히려"
+        type: adverb
+        meanings:
+          en: "rather / on the contrary / actually"
+          ja: "むしろ / かえって"
+        space_after: true
+      - id: p6_b3
+        surface: "소중하다고"
+        dictionary: "소중하다"
+        type: adjective
+        meanings:
+          en: "to be precious / to be valuable"
+          ja: "大切だ / 貴重だ"
+        grammar_notes:
+          en: "소중하다 + 고 (quotative, 'that...')"
+          ja: "소중하다 + 고 (〜だと / 引用)"
+        space_after: true
+      - id: p6_b4
+        surface: "생각해요"
+        dictionary: "생각하다"
+        type: verb
+        meanings:
+          en: "to think"
+          ja: "考える / 思う"
+        space_after: false
+
+  - id: p7
+    translations:
+      en:
+        intent: "It's okay not to know."
+        literal: "It's alright to not know."
+      ja:
+        intent: "知らなくても大丈夫だよ。"
+        literal: "知らなくても大丈夫です。"
+    blocks:
+      - id: p7_b1
+        surface: "몰라도"
+        dictionary: "모르다"
+        type: verb
+        meanings:
+          en: "to not know"
+          ja: "分からない / 知らない"
+        grammar_notes:
+          en: "모르다 + 아도 (even if / even though)"
+          ja: "모르다 + 아도 (〜しても / 〜くても)"
+        space_after: true
+      - id: p7_b2
+        surface: "괜찮아요"
+        dictionary: "괜찮다"
+        type: adjective
+        meanings:
+          en: "to be okay / to be fine"
+          ja: "大丈夫だ / 構わない"
+        space_after: false
+
+  - id: p8
+    translations:
+      en:
+        intent: "There's so much I want to talk about."
+        literal: "Stories I want to tell are many."
+      ja:
+        intent: "話したいことがたくさんある。"
+        literal: "伝えたい話がたくさんあります。"
+    blocks:
+      - id: p8_b1
+        surface: "하고"
+        dictionary: "하다"
+        type: verb
+        meanings:
+          en: "to do"
+          ja: "する"
+        grammar_notes:
+          en: "하다 + 고 싶은 (want to do + modifier)"
+          ja: "하다 + 고 싶은 (〜したい + 連体形)"
+        space_after: true
+      - id: p8_b2
+        surface: "싶은"
+        dictionary: "싶다"
+        type: verb
+        meanings:
+          en: "to want"
+          ja: "〜したい"
+        grammar_notes:
+          en: "싶다 + ㄴ (modifier ending)"
+          ja: "싶다 + ㄴ (連体形)"
+        space_after: true
+      - id: p8_b3
+        surface: "이야기가"
+        dictionary: "이야기"
+        type: noun
+        meanings:
+          en: "story / talk / things to say"
+          ja: "話 / 物語"
+        grammar_notes:
+          en: "이야기 (story) + 가 (subject particle)"
+          ja: "이야기 (話) + 가 (主語マーカー)"
+        space_after: true
+      - id: p8_b4
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          en: "so much / too"
+          ja: "とても / あまりにも"
+        space_after: true
+      - id: p8_b5
+        surface: "많아요"
+        dictionary: "많다"
+        type: adjective
+        meanings:
+          en: "to be many / to be a lot"
+          ja: "多い"
+        space_after: false
+
+  - id: p9
+    translations:
+      en:
+        intent: "The more you learn, the more interesting it gets."
+        literal: "The more you learn, the more fun it becomes."
+      ja:
+        intent: "学べば学ぶほど面白くなる。"
+        literal: "学べば学ぶほどもっと面白くなります。"
+    blocks:
+      - id: p9_b1
+        surface: "배우면"
+        dictionary: "배우다"
+        type: verb
+        meanings:
+          en: "to learn"
+          ja: "学ぶ / 習う"
+        grammar_notes:
+          en: "배우다 + 면 (if/when)"
+          ja: "배우다 + 면 (〜すれば)"
+        space_after: true
+      - id: p9_b2
+        surface: "배울수록"
+        dictionary: "배우다"
+        type: verb
+        meanings:
+          en: "the more you learn"
+          ja: "学べば学ぶほど"
+        grammar_notes:
+          en: "배우다 + ㄹ수록 (the more... the more)"
+          ja: "배우다 + ㄹ수록 (〜すればするほど)"
+        space_after: true
+      - id: p9_b3
+        surface: "더"
+        dictionary: "더"
+        type: adverb
+        meanings:
+          en: "more"
+          ja: "もっと"
+        space_after: true
+      - id: p9_b4
+        surface: "재밌어져요"
+        dictionary: "재밌다"
+        type: adjective
+        meanings:
+          en: "to become fun / interesting"
+          ja: "面白くなる"
+        grammar_notes:
+          en: "재밌다 (fun) + 어지다 (to become) + 어요 (polite)"
+          ja: "재밌다 (面白い) + 어지다 (〜になる) + 어요 (丁寧)"
+        space_after: false
+
+  - id: p10
+    translations:
+      en:
+        intent: "I'm grateful we could meet like this."
+        literal: "I am thankful that we could meet in this way."
+      ja:
+        intent: "こうして出会えたことに感謝してるよ。"
+        literal: "こうして会えたことに感謝しています。"
+    blocks:
+      - id: p10_b1
+        surface: "이렇게"
+        dictionary: "이렇게"
+        type: adverb
+        meanings:
+          en: "like this / in this way"
+          ja: "こうして / こんなふうに"
+        space_after: true
+      - id: p10_b2
+        surface: "만날"
+        dictionary: "만나다"
+        type: verb
+        meanings:
+          en: "to meet"
+          ja: "会う / 出会う"
+        grammar_notes:
+          en: "만나다 + ㄹ (future/potential modifier)"
+          ja: "만나다 + ㄹ (未来/可能連体形)"
+        space_after: true
+      - id: p10_b3
+        surface: "수"
+        dictionary: "수"
+        type: noun
+        meanings:
+          en: "ability / way"
+          ja: "方法 / こと"
+        space_after: true
+      - id: p10_b4
+        surface: "있어서"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          en: "because there is / since it's possible"
+          ja: "〜があって / 〜できて"
+        grammar_notes:
+          en: "있다 + 어서 (because/since)"
+          ja: "있다 + 어서 (〜ので / 〜から)"
+        space_after: true
+      - id: p10_b5
+        surface: "감사해요"
+        dictionary: "감사하다"
+        type: verb
+        meanings:
+          en: "to be grateful / to thank"
+          ja: "感謝する / ありがたい"
+        space_after: false
