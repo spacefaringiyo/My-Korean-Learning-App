@@ -4,6 +4,7 @@ theme: General
 difficulty: Beginner
 phrases:
   - id: p1
+    korean: "너무 보고싶어"
     translations:
       en:
         intent: "I miss you so much."
@@ -33,6 +34,7 @@ phrases:
         space_after: false
 
   - id: p2
+    korean: "우리 팬들이 항상 최고야"
     translations:
       en:
         intent: "Our fans are always the best."
@@ -81,6 +83,7 @@ phrases:
         space_after: false
 
   - id: p3
+    korean: "밥 잘 챙겨 먹어"
     translations:
       en:
         intent: "Don't skip meals!"
@@ -126,6 +129,7 @@ phrases:
         space_after: false
 
   - id: p4
+    korean: "이번 앨범 진짜 열심히 준비했어요"
     translations:
       en:
         intent: "I worked really hard on this album."
@@ -179,6 +183,7 @@ phrases:
         space_after: false
 
   - id: p5
+    korean: "조금만 더 기다려주세요"
     translations:
       en:
         intent: "Wait just a little longer."
@@ -219,6 +224,7 @@ phrases:
         space_after: false
 
   - id: p6
+    korean: "잘 잤어?"
     translations:
       en:
         intent: "Did you sleep well?"
@@ -248,6 +254,7 @@ phrases:
         space_after: false
 
   - id: p7
+    korean: "오늘 뭐해?"
     translations:
       en:
         intent: "What are you doing today?"
@@ -277,6 +284,7 @@ phrases:
         space_after: false
 
   - id: p8
+    korean: "힘내! 할 수 있어"
     translations:
       en:
         intent: "Cheer up! You can do it."
@@ -325,6 +333,7 @@ phrases:
         space_after: false
 
   - id: p9
+    korean: "건강 조심해"
     translations:
       en:
         intent: "Take care of your health."
@@ -351,6 +360,7 @@ phrases:
         space_after: false
 
   - id: p10
+    korean: "뮤비 봤어?"
     translations:
       en:
         intent: "Did you see the music video?"
@@ -380,6 +390,7 @@ phrases:
         space_after: false
 
   - id: p11
+    korean: "사랑해"
     translations:
       en:
         intent: "I love you."
@@ -398,6 +409,7 @@ phrases:
         space_after: false
 
   - id: p12
+    korean: "오늘 날씨가 추우니까 따뜻하게 입어"
     translations:
       en:
         intent: "It's cold today, dress warmly."
@@ -457,6 +469,7 @@ phrases:
         space_after: false
 
   - id: p13
+    korean: "항상 고마워"
     translations:
       en:
         intent: "Thank you always."
@@ -483,6 +496,7 @@ phrases:
         space_after: false
 
   - id: p14
+    korean: "내일 봐요!"
     translations:
       en:
         intent: "See you tomorrow!"
@@ -509,6 +523,7 @@ phrases:
         space_after: false
 
   - id: p15
+    korean: "한국에 언제 와요?"
     translations:
       en:
         intent: "When are you coming to Korea?"
@@ -546,6 +561,7 @@ phrases:
         space_after: false
 
   - id: p16
+    korean: "콘서트 기대돼요"
     translations:
       en:
         intent: "I'm looking forward to the concert."
@@ -572,6 +588,7 @@ phrases:
         space_after: false
 
   - id: p17
+    korean: "좋은 꿈 꿔"
     translations:
       en:
         intent: "Have a good dream."
@@ -609,6 +626,7 @@ phrases:
         space_after: false
 
   - id: p18
+    korean: "지금 연습하고 있어요"
     translations:
       en:
         intent: "I'm practicing right now."
@@ -646,6 +664,7 @@ phrases:
         space_after: false
 
   - id: p19
+    korean: "아프지 마"
     translations:
       en:
         intent: "Don't be sick."
@@ -675,6 +694,7 @@ phrases:
         space_after: false
 
   - id: p20
+    korean: "밥은 먹었어?"
     translations:
       en:
         intent: "Did you eat?"

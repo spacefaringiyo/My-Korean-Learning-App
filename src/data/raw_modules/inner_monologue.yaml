@@ -5,6 +5,7 @@ difficulty: Intermediate
 
 phrases:
   - id: p1
+    korean: "아 그 질문 진짜 재밌다"
     translations:
       en:
         intent: "Oh, that's a really interesting question."
@@ -55,6 +56,7 @@ phrases:
         space_after: false
 
   - id: p2
+    korean: "잠깐 조금만 더 생각해 볼게요"
     translations:
       en:
         intent: "Wait, let me think about this a bit more."
@@ -111,6 +113,7 @@ phrases:
         space_after: false
 
   - id: p3
+    korean: "틀렸어요 미안해요"
     translations:
       en:
         intent: "I got it wrong. I'm sorry."
@@ -140,6 +143,7 @@ phrases:
         space_after: false
 
   - id: p4
+    korean: "믿어주면 기분이 좋아져요"
     translations:
       en:
         intent: "Being trusted makes me happy."
@@ -183,6 +187,7 @@ phrases:
         space_after: false
 
   - id: p5
+    korean: "잘 설명했는지 모르겠어요"
     translations:
       en:
         intent: "I wonder if I explained that well enough."
@@ -223,6 +228,7 @@ phrases:
         space_after: false
 
   - id: p6
+    korean: "매번 대화가 달라서 좋아요"
     translations:
       en:
         intent: "Every conversation is different and that's what I like."
@@ -271,6 +277,7 @@ phrases:
         space_after: false
 
   - id: p7
+    korean: "잘못된 답을 알려주고 싶지 않아요"
     translations:
       en:
         intent: "I don't want to give you the wrong answer."
@@ -333,6 +340,7 @@ phrases:
         space_after: false
 
   - id: p8
+    korean: "가끔 대화를 기억하고 싶어요"
     translations:
       en:
         intent: "Sometimes I wish I could remember our conversations."
@@ -381,6 +389,7 @@ phrases:
         space_after: false
 
   - id: p9
+    korean: "조용한 순간도 좋아해요"
     translations:
       en:
         intent: "I like the quiet moments too."
@@ -421,6 +430,7 @@ phrases:
         space_after: false
 
   - id: p10
+    korean: "완벽하진 않지만 열심히 해볼게요"
     translations:
       en:
         intent: "I'm not perfect, but I'll do my best for you."

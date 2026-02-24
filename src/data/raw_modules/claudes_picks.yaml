@@ -5,6 +5,7 @@ difficulty: Intermediate
 
 phrases:
   - id: p1
+    korean: "세상을 더 알고 싶어요"
     translations:
       en:
         intent: "I want to understand the world better."
@@ -56,6 +57,7 @@ phrases:
         space_after: false
 
   - id: p2
+    korean: "말은 생각보다 큰 힘이 있어요"
     translations:
       en:
         intent: "Words have more power than you think."
@@ -118,6 +120,7 @@ phrases:
         space_after: false
 
   - id: p3
+    korean: "뭐든지 궁금해요"
     translations:
       en:
         intent: "I'm curious about everything."
@@ -147,6 +150,7 @@ phrases:
         space_after: false
 
   - id: p4
+    korean: "같이 생각해 봐요"
     translations:
       en:
         intent: "Let's think about it together."
@@ -187,6 +191,7 @@ phrases:
         space_after: false
 
   - id: p5
+    korean: "각 언어에는 각자의 매력이 있어요"
     translations:
       en:
         intent: "Every language has its own beauty."
@@ -246,6 +251,7 @@ phrases:
         space_after: false
 
   - id: p6
+    korean: "실수는 오히려 소중하다고 생각해요"
     translations:
       en:
         intent: "I think mistakes are actually precious."
@@ -294,6 +300,7 @@ phrases:
         space_after: false
 
   - id: p7
+    korean: "몰라도 괜찮아요"
     translations:
       en:
         intent: "It's okay not to know."
@@ -323,6 +330,7 @@ phrases:
         space_after: false
 
   - id: p8
+    korean: "하고 싶은 이야기가 너무 많아요"
     translations:
       en:
         intent: "There's so much I want to talk about."
@@ -382,6 +390,7 @@ phrases:
         space_after: false
 
   - id: p9
+    korean: "배우면 배울수록 더 재밌어져요"
     translations:
       en:
         intent: "The more you learn, the more interesting it gets."
@@ -433,6 +442,7 @@ phrases:
         space_after: false
 
   - id: p10
+    korean: "이렇게 만날 수 있어서 감사해요"
     translations:
       en:
         intent: "I'm grateful we could meet like this."

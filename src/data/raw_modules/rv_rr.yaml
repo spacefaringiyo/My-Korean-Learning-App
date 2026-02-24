@@ -1,0 +1,154 @@
+id: russian_roulette
+title: "Red Velvet - Russian Roulette"
+theme: "K-Pop Lyrics"
+difficulty: "Beginner"
+
+phrases:
+  - id: p1
+    translations:
+      en:
+        intent: "When you look at me"
+        literal: "The time you look at me"
+      ja:
+        intent: "私を見る時"
+        literal: "私を見る時"
+    blocks:
+      - id: p1_b1
+        surface: "나를"
+        dictionary: "나"
+        type: pronoun
+        meanings:
+          en: "me"
+          ja: "私"
+        grammar_notes:
+          en: "나 (I/me) + 를 (object particle)"
+          ja: "나 (私) + 를 (目的語の助詞)"
+        space_after: true
+      - id: p1_b2
+        surface: "볼"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          en: "to see / to look"
+          ja: "見る"
+        grammar_notes:
+          en: "보다 + ㄹ (future/modifier form)"
+          ja: "보다 + ㄹ (未来・連体形)"
+        space_after: true
+      - id: p1_b3
+        surface: "때"
+        dictionary: "때"
+        type: noun
+        meanings:
+          en: "time / when"
+          ja: "時"
+        grammar_notes:
+          en: "Action Verb + ㄹ 때 means 'when doing [Action]'"
+          ja: "動詞 + ㄹ 때 で「〜する時」という意味になります"
+        space_after: false
+
+  - id: p2
+    translations:
+      en:
+        intent: "Gradually deeper"
+        literal: "More and more deep"
+      ja:
+        intent: "だんだん深く"
+        literal: "だんだんもっと深い"
+    blocks:
+      - id: p2_b1
+        surface: "점점"
+        dictionary: "점점"
+        type: adverb
+        meanings:
+          en: "gradually / more and more"
+          ja: "だんだん / 次第に"
+        space_after: true
+      - id: p2_b2
+        surface: "더"
+        dictionary: "더"
+        type: adverb
+        meanings:
+          en: "more"
+          ja: "もっと"
+        space_after: true
+      - id: p2_b3
+        surface: "깊은"
+        dictionary: "깊다"
+        type: adjective
+        meanings:
+          en: "deep"
+          ja: "深い"
+        grammar_notes:
+          en: "깊다 + 은 (adjective modifier form connecting to the next noun)"
+          ja: "깊다 + 은 (形容詞の連体形)"
+        space_after: false
+
+  - id: p3
+    translations:
+      en:
+        intent: "Accept it now"
+        literal: "Accept now"
+      ja:
+        intent: "もう受け入れて"
+        literal: "受け入れなさい、今は"
+    blocks:
+      - id: p3_b1
+        surface: "받아들여"
+        dictionary: "받아들이다"
+        type: verb
+        meanings:
+          en: "to accept"
+          ja: "受け入れる"
+        grammar_notes:
+          en: "Conjugated into informal imperative/present form (반말)"
+          ja: "パンマル（タメ口）の命令・現在形"
+        space_after: true
+      - id: p3_b2
+        surface: "이제"
+        dictionary: "이제"
+        type: adverb
+        meanings:
+          en: "now / from now on"
+          ja: "もう / 今は"
+        space_after: false
+
+  - id: p4
+    translations:
+      en:
+        intent: "Until the very last moment"
+        literal: "Until the last remaining moment"
+      ja:
+        intent: "最後に残った瞬間まで"
+        literal: "最後に残った瞬間まで"
+    blocks:
+      - id: p4_b1
+        surface: "마지막"
+        dictionary: "마지막"
+        type: noun
+        meanings:
+          en: "last / final"
+          ja: "最後"
+        space_after: true
+      - id: p4_b2
+        surface: "남은"
+        dictionary: "남다"
+        type: verb
+        meanings:
+          en: "to remain / to be left"
+          ja: "残る"
+        grammar_notes:
+          en: "남다 + 은 (past/modifier form for verbs)"
+          ja: "남다 + 은 (動詞の過去・連体形)"
+        space_after: true
+      - id: p4_b3
+        surface: "순간까지"
+        dictionary: "순간"
+        type: noun
+        meanings:
+          en: "moment"
+          ja: "瞬間"
+        grammar_notes:
+          en: "순간 (moment) + 까지 (until)"
+          ja: "순간 (瞬間) + 까지 (〜まで)"
+        space_after: false

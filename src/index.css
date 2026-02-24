@@ -16,6 +16,18 @@
     /* Yellow */
     --color-pronoun: #c084fc;
     /* Purple */
+    --color-particle: #2dd4bf;
+    /* Teal */
+    --color-interjection: #f472b6;
+    /* Pink */
+    --color-counter: #fb923c;
+    /* Orange */
+    --color-determiner: #38bdf8;
+    /* Sky */
+    --color-conjunction: #a3e635;
+    /* Lime */
+    --color-copula: #fb7185;
+    /* Rose */
 
     --font-korean: 'Pretendard', 'Malgun Gothic', sans-serif;
     --font-english: 'Inter', system-ui, sans-serif;
@@ -403,6 +415,30 @@ body {
 
 .syntax-pronoun {
     color: var(--color-pronoun);
+}
+
+.syntax-particle {
+    color: var(--color-particle);
+}
+
+.syntax-interjection {
+    color: var(--color-interjection);
+}
+
+.syntax-counter {
+    color: var(--color-counter);
+}
+
+.syntax-determiner {
+    color: var(--color-determiner);
+}
+
+.syntax-conjunction {
+    color: var(--color-conjunction);
+}
+
+.syntax-copula {
+    color: var(--color-copula);
 }
 
 /* Right Pane - Details */

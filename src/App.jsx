@@ -129,7 +129,18 @@ function App() {
         { type: 'adjective', label: lang === 'ja' ? '形容詞 (Adjective)' : 'Adjective', color: 'var(--color-adjective)' },
         { type: 'adverb', label: lang === 'ja' ? '副詞 (Adverb)' : 'Adverb', color: 'var(--color-adverb)' },
         { type: 'pronoun', label: lang === 'ja' ? '代名詞 (Pronoun)' : 'Pronoun', color: 'var(--color-pronoun)' },
+        { type: 'particle', label: lang === 'ja' ? '助詞 (Particle)' : 'Particle', color: 'var(--color-particle)' },
+        { type: 'interjection', label: lang === 'ja' ? '感嘆詞 (Interjection)' : 'Interjection', color: 'var(--color-interjection)' },
+        { type: 'counter', label: lang === 'ja' ? '助数詞 (Counter)' : 'Counter', color: 'var(--color-counter)' },
+        { type: 'determiner', label: lang === 'ja' ? '限定詞 (Determiner)' : 'Determiner', color: 'var(--color-determiner)' },
+        { type: 'conjunction', label: lang === 'ja' ? '接続詞 (Conjunction)' : 'Conjunction', color: 'var(--color-conjunction)' },
+        { type: 'copula', label: lang === 'ja' ? '繫辞 (Copula)' : 'Copula', color: 'var(--color-copula)' },
     ]
+
+    const getTypeLabel = (type) => {
+        const guide = getWordTypeGuide().find(g => g.type === type)
+        return guide ? guide.label : type
+    }
 
     const getDifficultyColor = (diff) => {
         switch (diff?.toLowerCase()) {
@@ -526,7 +537,7 @@ function App() {
 
                                                             <div className="word-tooltip">
                                                                 <span className="tooltip-dict korean-text">{block.dictionary}</span>
-                                                                <span className="tooltip-meaning">{block.meanings[lang]}</span>
+                                                                <span className="tooltip-meaning">{block.meanings?.[lang] || block.meanings?.ja || ''}</span>
                                                                 <div className="tooltip-arrow"></div>
                                                             </div>
                                                         </div>
@@ -563,7 +574,7 @@ function App() {
                                                 {phrases.findIndex(p => p.id === selectedPhrase.id) + 1}.
                                             </span>
                                             <div className={`translation-text translation-${transType}`}>
-                                                {selectedPhrase.translations[lang][transType]}
+                                                {selectedPhrase.translations?.[lang]?.[transType] || selectedPhrase.translations?.ja?.[transType] || ''}
                                             </div>
                                         </div>
 
@@ -579,7 +590,7 @@ function App() {
                                                         onClick={() => setCrossRefWord(block.dictionary)}
                                                     >
                                                         <div className="word-type-badge" style={{ color: showColors ? `var(--color-${block.type})` : 'inherit' }}>
-                                                            {block.type}
+                                                            {getTypeLabel(block.type)}
                                                         </div>
 
                                                         <div className="word-detail-header">
@@ -588,12 +599,12 @@ function App() {
                                                         </div>
 
                                                         <div className="word-meaning">
-                                                            {block.meanings[lang]}
+                                                            {block.meanings?.[lang] || block.meanings?.ja || ''}
                                                         </div>
 
                                                         {block.grammar_notes && (
                                                             <div className="word-grammar">
-                                                                {block.grammar_notes[lang]}
+                                                                {block.grammar_notes?.[lang] || block.grammar_notes?.ja || ''}
                                                             </div>
                                                         )}
 
@@ -707,7 +718,7 @@ function App() {
                                                 ))}
                                             </div>
                                             <div className="cross-ref-trans">
-                                                {phrase.translations[lang][transType]}
+                                                {phrase.translations?.[lang]?.[transType] || phrase.translations?.ja?.[transType] || ''}
                                             </div>
                                         </div>
                                     )
