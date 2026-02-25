@@ -7,7 +7,7 @@
   "scripts": {
     "data:build": "node scripts/build-data.js",
     "dev": "node scripts/build-data.js && vite",
-    "build": "node scripts/build-data.js && vite build",
+    "build": "vite build && node scripts/build-data.js --dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",

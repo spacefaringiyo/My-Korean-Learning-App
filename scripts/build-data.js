@@ -7,7 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const RAW_DIR = path.join(__dirname, '../src/data/raw_modules');
-const OUTPUT_DIR = path.join(__dirname, '../public/data');
+
+// When called with --dist, write directly to dist/data/ (for production builds).
+// Otherwise, write to public/data/ (for dev server).
+const useDistDir = process.argv.includes('--dist');
+const OUTPUT_DIR = path.join(__dirname, useDistDir ? '../dist/data' : '../public/data');
 const MODULES_OUTPUT_DIR = path.join(OUTPUT_DIR, 'modules');
 
 // Ensure output directories exist
