@@ -213,7 +213,7 @@ When authoring new phrases, follow these structural guidelines to ensure a high-
 
 ### 1. The 5-Level Difficulty System
 We use a 1-5 difficulty scale for modules, based generally on phrase length and grammatical complexity.
-- **Level 1 (Novice)**: extremely short, standalone words or simple 1-2 word expressions. (e.g., "너무 예뻐요" - So pretty)
+- **Level 1 (Novice)**: extremely short, standalone words or simple 2-3 word expressions. (e.g., "너무 예뻐요" - So pretty)
 - **Level 2 (Beginner)**: basic complete sentences, simple subject-verb-object structures, 3-5 blocks. (e.g., "오늘 뭐해?" - What are you doing today?)
 - **Level 3 (Intermediate)**: compound sentences (two clauses) with basic conjunctions/time phrases, 6-9 blocks. (e.g., "날씨가 추우니까 따뜻하게 입어" - It's cold today, so dress warmly)
 - **Level 4 (Upper-Intermediate)**: complex multi-clause sentences, nuanced expressions, indirect quotations.

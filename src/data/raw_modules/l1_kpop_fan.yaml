@@ -1,0 +1,2931 @@
+id: l1_kpop_fan
+title: "K-Pop Fan Life"
+theme: "K-Pop & Fandom"
+difficulty: "Level 1"
+
+phrases:
+  - id: p1
+    korean: "너무 멋져요"
+    translations:
+      ja:
+        intent: "かっこよすぎます。"
+        literal: "とても素敵です。"
+    blocks:
+      - id: p1_b1
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても / あまりにも"
+        space_after: true
+      - id: p1_b2
+        surface: "멋져요"
+        dictionary: "멋지다"
+        type: adjective
+        meanings:
+          ja: "素敵だ / かっこいい"
+        grammar_notes:
+          ja: "멋지다 + 어요 (丁寧語の現在形)"
+        space_after: false
+
+  - id: p2
+    korean: "진짜 대박이야"
+    translations:
+      ja:
+        intent: "マジでやばい。"
+        literal: "本当に大ヒットだ / すごい。"
+    blocks:
+      - id: p2_b1
+        surface: "진짜"
+        dictionary: "진짜"
+        type: adverb
+        meanings:
+          ja: "本当に / マジで"
+        space_after: true
+      - id: p2_b2
+        surface: "대박이야"
+        dictionary: "대박이다"
+        type: noun
+        meanings:
+          ja: "大ヒットだ / やばい (スラング)"
+        grammar_notes:
+          ja: "대박 (大ヒット/やばい) + 이야 (〜だ/である・タメ口)"
+        space_after: false
+
+  - id: p3
+    korean: "노래가 좋아요"
+    translations:
+      ja:
+        intent: "歌がいいです。"
+        literal: "歌が良いです。"
+    blocks:
+      - id: p3_b1
+        surface: "노래가"
+        dictionary: "노래"
+        type: noun
+        meanings:
+          ja: "歌"
+        grammar_notes:
+          ja: "노래 (歌) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p3_b2
+        surface: "좋아요"
+        dictionary: "좋다"
+        type: adjective
+        meanings:
+          ja: "良い / 好きだ"
+        space_after: false
+
+  - id: p4
+    korean: "춤 잘 춰요"
+    translations:
+      ja:
+        intent: "ダンスが上手です。"
+        literal: "踊りをよく踊ります。"
+    blocks:
+      - id: p4_b1
+        surface: "춤"
+        dictionary: "춤"
+        type: noun
+        meanings:
+          ja: "ダンス / 踊り"
+        space_after: true
+      - id: p4_b2
+        surface: "잘"
+        dictionary: "잘"
+        type: adverb
+        meanings:
+          ja: "よく / 上手に"
+        space_after: true
+      - id: p4_b3
+        surface: "춰요"
+        dictionary: "추다"
+        type: verb
+        meanings:
+          ja: "踊る"
+        grammar_notes:
+          ja: "추다 + 어요 (〜ます)"
+        space_after: false
+
+  - id: p5
+    korean: "오늘 최고예요"
+    translations:
+      ja:
+        intent: "今日最高です。"
+        literal: "今日最高です。"
+    blocks:
+      - id: p5_b1
+        surface: "오늘"
+        dictionary: "오늘"
+        type: noun
+        meanings:
+          ja: "今日"
+        space_after: true
+      - id: p5_b2
+        surface: "최고예요"
+        dictionary: "최고"
+        type: noun
+        meanings:
+          ja: "最高"
+        grammar_notes:
+          ja: "최고 (最高) + 예요 (〜です)"
+        space_after: false
+
+  - id: p6
+    korean: "언제 컴백해요?"
+    translations:
+      ja:
+        intent: "いつカムバックしますか？"
+        literal: "いつカムバックしますか？"
+    blocks:
+      - id: p6_b1
+        surface: "언제"
+        dictionary: "언제"
+        type: pronoun
+        meanings:
+          ja: "いつ"
+        space_after: true
+      - id: p6_b2
+        surface: "컴백해요?"
+        dictionary: "컴백하다"
+        type: verb
+        meanings:
+          ja: "カムバックする (K-POPでの復帰/新曲リリース)"
+        space_after: false
+
+  - id: p7
+    korean: "표 샀어요?"
+    translations:
+      ja:
+        intent: "チケット買いましたか？"
+        literal: "チケット買いましたか？"
+    blocks:
+      - id: p7_b1
+        surface: "표"
+        dictionary: "표"
+        type: noun
+        meanings:
+          ja: "チケット / 切符"
+        space_after: true
+      - id: p7_b2
+        surface: "샀어요?"
+        dictionary: "사다"
+        type: verb
+        meanings:
+          ja: "買う"
+        grammar_notes:
+          ja: "사다 + 았어요 (過去形・買いましたか？)"
+        space_after: false
+
+  - id: p8
+    korean: "팬미팅 가고 싶어"
+    translations:
+      ja:
+        intent: "ペンミに行きたい。"
+        literal: "ファンミーティングに行きたい。"
+    blocks:
+      - id: p8_b1
+        surface: "팬미팅"
+        dictionary: "팬미팅"
+        type: noun
+        meanings:
+          ja: "ファンミーティング (ペンミ)"
+        space_after: true
+      - id: p8_b2
+        surface: "가고"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        space_after: true
+      - id: p8_b3
+        surface: "싶어"
+        dictionary: "싶다"
+        type: adjective
+        meanings:
+          ja: "〜したい"
+        grammar_notes:
+          ja: "고 싶다 (〜したい) のタメ口表現"
+        space_after: false
+
+  - id: p9
+    korean: "많이 기다렸어요"
+    translations:
+      ja:
+        intent: "たくさん待ちました。"
+        literal: "たくさん待ちました。"
+    blocks:
+      - id: p9_b1
+        surface: "많이"
+        dictionary: "많이"
+        type: adverb
+        meanings:
+          ja: "たくさん / 多く"
+        space_after: true
+      - id: p9_b2
+        surface: "기다렸어요"
+        dictionary: "기다리다"
+        type: verb
+        meanings:
+          ja: "待つ"
+        grammar_notes:
+          ja: "기다리다 + 었어요 (過去形)"
+        space_after: false
+
+  - id: p10
+    korean: "라이브 보고 있어"
+    translations:
+      ja:
+        intent: "ライブ見てるよ。"
+        literal: "ライブを見ています。"
+    blocks:
+      - id: p10_b1
+        surface: "라이브"
+        dictionary: "라이브"
+        type: noun
+        meanings:
+          ja: "ライブ / 生放送"
+        space_after: true
+      - id: p10_b2
+        surface: "보고"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        space_after: true
+      - id: p10_b3
+        surface: "있어"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          ja: "いる (進行形の補助動詞)"
+        grammar_notes:
+          ja: "고 있다 (〜している) のタメ口"
+        space_after: false
+
+  - id: p11
+    korean: "너무 귀여워"
+    translations:
+      ja:
+        intent: "可愛すぎる。"
+        literal: "とても可愛いです。"
+    blocks:
+      - id: p11_b1
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても / あまりにも"
+        space_after: true
+      - id: p11_b2
+        surface: "귀여워"
+        dictionary: "귀엽다"
+        type: adjective
+        meanings:
+          ja: "可愛い"
+        grammar_notes:
+          ja: "ㅂ変則活用 (귀엽다 + 어 -> 귀여워)"
+        space_after: false
+
+  - id: p12
+    korean: "사진 봤어?"
+    translations:
+      ja:
+        intent: "写真見た？"
+        literal: "写真見ましたか？"
+    blocks:
+      - id: p12_b1
+        surface: "사진"
+        dictionary: "사진"
+        type: noun
+        meanings:
+          ja: "写真"
+        space_after: true
+      - id: p12_b2
+        surface: "봤어?"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p13
+    korean: "항상 응원해요"
+    translations:
+      ja:
+        intent: "いつも応援しています。"
+        literal: "常に応援します。"
+    blocks:
+      - id: p13_b1
+        surface: "항상"
+        dictionary: "항상"
+        type: adverb
+        meanings:
+          ja: "いつも / 常に"
+        space_after: true
+      - id: p13_b2
+        surface: "응원해요"
+        dictionary: "응원하다"
+        type: verb
+        meanings:
+          ja: "応援する"
+        space_after: false
+
+  - id: p14
+    korean: "벌써 끝났어?"
+    translations:
+      ja:
+        intent: "もう終わったの？"
+        literal: "すでに終わりましたか？"
+    blocks:
+      - id: p14_b1
+        surface: "벌써"
+        dictionary: "벌써"
+        type: adverb
+        meanings:
+          ja: "もう / すでに"
+        space_after: true
+      - id: p14_b2
+        surface: "끝났어?"
+        dictionary: "끝나다"
+        type: verb
+        meanings:
+          ja: "終わる"
+        grammar_notes:
+          ja: "끝나다 + 았어 (過去形疑問・タメ口)"
+        space_after: false
+
+  - id: p15
+    korean: "목소리 정말 좋아"
+    translations:
+      ja:
+        intent: "声が本当にいい。"
+        literal: "声が本当に良い。"
+    blocks:
+      - id: p15_b1
+        surface: "목소리"
+        dictionary: "목소리"
+        type: noun
+        meanings:
+          ja: "声"
+        space_after: true
+      - id: p15_b2
+        surface: "정말"
+        dictionary: "정말"
+        type: adverb
+        meanings:
+          ja: "本当に"
+        space_after: true
+      - id: p15_b3
+        surface: "좋아"
+        dictionary: "좋다"
+        type: adjective
+        meanings:
+          ja: "良い / 好きだ"
+        space_after: false
+
+  - id: p16
+    korean: "완전 감동이야"
+    translations:
+      ja:
+        intent: "マジで感動。"
+        literal: "完全に感動だ。"
+    blocks:
+      - id: p16_b1
+        surface: "완전"
+        dictionary: "완전"
+        type: adverb
+        meanings:
+          ja: "完全に / マジで (俗語的表現)"
+        space_after: true
+      - id: p16_b2
+        surface: "감동이야"
+        dictionary: "감동이다"
+        type: noun
+        meanings:
+          ja: "感動だ"
+        grammar_notes:
+          ja: "감동 (感動) + 이야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p17
+    korean: "앨범 새로 샀어"
+    translations:
+      ja:
+        intent: "アルバム新しく買ったよ。"
+        literal: "アルバムを新しく買いました。"
+    blocks:
+      - id: p17_b1
+        surface: "앨범"
+        dictionary: "앨범"
+        type: noun
+        meanings:
+          ja: "アルバム"
+        space_after: true
+      - id: p17_b2
+        surface: "새로"
+        dictionary: "새로"
+        type: adverb
+        meanings:
+          ja: "新しく"
+        space_after: true
+      - id: p17_b3
+        surface: "샀어"
+        dictionary: "사다"
+        type: verb
+        meanings:
+          ja: "買う"
+        grammar_notes:
+          ja: "사다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p18
+    korean: "잠을 못 잤어"
+    translations:
+      ja:
+        intent: "寝られなかったよ。"
+        literal: "眠りを寝られませんでした。"
+    blocks:
+      - id: p18_b1
+        surface: "잠을"
+        dictionary: "잠"
+        type: noun
+        meanings:
+          ja: "眠り"
+        grammar_notes:
+          ja: "잠 (眠り) + 을 (目的格助詞・〜を)"
+        space_after: true
+      - id: p18_b2
+        surface: "못"
+        dictionary: "못"
+        type: adverb
+        meanings:
+          ja: "〜できない"
+        space_after: true
+      - id: p18_b3
+        surface: "잤어"
+        dictionary: "자다"
+        type: verb
+        meanings:
+          ja: "寝る"
+        grammar_notes:
+          ja: "자다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p19
+    korean: "누구 팬이에요?"
+    translations:
+      ja:
+        intent: "誰のファンですか？"
+        literal: "誰のファンですか？"
+    blocks:
+      - id: p19_b1
+        surface: "누구"
+        dictionary: "누구"
+        type: pronoun
+        meanings:
+          ja: "誰"
+        space_after: true
+      - id: p19_b2
+        surface: "팬이에요?"
+        dictionary: "팬"
+        type: noun
+        meanings:
+          ja: "ファン"
+        grammar_notes:
+          ja: "팬 (ファン) + 이에요 (〜ですか？)"
+        space_after: false
+
+  - id: p20
+    korean: "머리 색깔 예뻐요"
+    translations:
+      ja:
+        intent: "髪色が綺麗ですね。"
+        literal: "髪の色が綺麗です。"
+    blocks:
+      - id: p20_b1
+        surface: "머리"
+        dictionary: "머리"
+        type: noun
+        meanings:
+          ja: "頭 / 髪"
+        space_after: true
+      - id: p20_b2
+        surface: "색깔"
+        dictionary: "색깔"
+        type: noun
+        meanings:
+          ja: "色"
+        space_after: true
+      - id: p20_b3
+        surface: "예뻐요"
+        dictionary: "예쁘다"
+        type: adjective
+        meanings:
+          ja: "綺麗だ / 可愛い"
+        grammar_notes:
+          ja: "예쁘다 + 어요 (으変則活用 -> 예뻐요)"
+        space_after: false
+
+  - id: p21
+    korean: "유나 파트 좋아요"
+    translations:
+      ja:
+        intent: "ユナのパートがいいです。"
+        literal: "ユナのパートが好きです。"
+    blocks:
+      - id: p21_b1
+        surface: "유나"
+        dictionary: "유나"
+        type: noun
+        meanings:
+          ja: "ユナ (人名)"
+        space_after: true
+      - id: p21_b2
+        surface: "파트"
+        dictionary: "파트"
+        type: noun
+        meanings:
+          ja: "パート (歌の担当部分)"
+        space_after: true
+      - id: p21_b3
+        surface: "좋아요"
+        dictionary: "좋다"
+        type: adjective
+        meanings:
+          ja: "良い / 好きだ"
+        space_after: false
+
+  - id: p22
+    korean: "센터 누구예요?"
+    translations:
+      ja:
+        intent: "センターは誰ですか？"
+        literal: "センターは誰ですか？"
+    blocks:
+      - id: p22_b1
+        surface: "센터"
+        dictionary: "센터"
+        type: noun
+        meanings:
+          ja: "センター (グループの立ち位置)"
+        space_after: true
+      - id: p22_b2
+        surface: "누구예요?"
+        dictionary: "누구"
+        type: pronoun
+        meanings:
+          ja: "誰"
+        grammar_notes:
+          ja: "누구 (誰) + 예요 (〜ですか？)"
+        space_after: false
+
+  - id: p23
+    korean: "지호 진짜 부러워"
+    translations:
+      ja:
+        intent: "ジホが本当に羨ましい。"
+        literal: "ジホが本当に羨ましい。"
+    blocks:
+      - id: p23_b1
+        surface: "지호"
+        dictionary: "지호"
+        type: noun
+        meanings:
+          ja: "ジホ (人名)"
+        space_after: true
+      - id: p23_b2
+        surface: "진짜"
+        dictionary: "진짜"
+        type: adverb
+        meanings:
+          ja: "本当に"
+        space_after: true
+      - id: p23_b3
+        surface: "부러워"
+        dictionary: "부럽다"
+        type: adjective
+        meanings:
+          ja: "羨ましい"
+        grammar_notes:
+          ja: "ㅂ変則活用 (부럽다 + 어 -> 부러워)"
+        space_after: false
+
+  - id: p24
+    korean: "유나 언니 예뻐요"
+    translations:
+      ja:
+        intent: "ユナお姉ちゃん綺麗です。"
+        literal: "ユナお姉さん綺麗です。"
+    blocks:
+      - id: p24_b1
+        surface: "유나"
+        dictionary: "유나"
+        type: noun
+        meanings:
+          ja: "ユナ (人名)"
+        space_after: true
+      - id: p24_b2
+        surface: "언니"
+        dictionary: "언니"
+        type: noun
+        meanings:
+          ja: "お姉さん (女性から見た年上の女性)"
+        space_after: true
+      - id: p24_b3
+        surface: "예뻐요"
+        dictionary: "예쁘다"
+        type: adjective
+        meanings:
+          ja: "綺麗だ / 可愛い"
+        space_after: false
+
+  - id: p25
+    korean: "걸그룹 좋아해요?"
+    translations:
+      ja:
+        intent: "ガールズグループ好きですか？"
+        literal: "ガールズグループが好きですか？"
+    blocks:
+      - id: p25_b1
+        surface: "걸그룹"
+        dictionary: "걸그룹"
+        type: noun
+        meanings:
+          ja: "ガールズグループ"
+        space_after: true
+      - id: p25_b2
+        surface: "좋아해요?"
+        dictionary: "좋아하다"
+        type: verb
+        meanings:
+          ja: "好きだ"
+        grammar_notes:
+          ja: "좋아하다 + 아요 (丁寧語)"
+        space_after: false
+
+  - id: p26
+    korean: "신곡 들었어요?"
+    translations:
+      ja:
+        intent: "新曲聴きましたか？"
+        literal: "新曲聞きましたか？"
+    blocks:
+      - id: p26_b1
+        surface: "신곡"
+        dictionary: "신곡"
+        type: noun
+        meanings:
+          ja: "新曲"
+        space_after: true
+      - id: p26_b2
+        surface: "들었어요?"
+        dictionary: "듣다"
+        type: verb
+        meanings:
+          ja: "聞く"
+        grammar_notes:
+          ja: "ㄷ変則活用 (듣다 + 었어요 -> 들었어요)"
+        space_after: false
+
+  - id: p27
+    korean: "뮤비 공개됐어"
+    translations:
+      ja:
+        intent: "MVが公開されたよ。"
+        literal: "MVが公開されたよ。"
+    blocks:
+      - id: p27_b1
+        surface: "뮤비"
+        dictionary: "뮤비"
+        type: noun
+        meanings:
+          ja: "MV (ミュージックビデオの略)"
+        space_after: true
+      - id: p27_b2
+        surface: "공개됐어"
+        dictionary: "공개되다"
+        type: verb
+        meanings:
+          ja: "公開される"
+        grammar_notes:
+          ja: "공개되다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p28
+    korean: "엔딩 요정 누구야?"
+    translations:
+      ja:
+        intent: "エンディング妖精は誰？"
+        literal: "エンディング妖精は誰だ？"
+    blocks:
+      - id: p28_b1
+        surface: "엔딩"
+        dictionary: "엔딩"
+        type: noun
+        meanings:
+          ja: "エンディング"
+        space_after: true
+      - id: p28_b2
+        surface: "요정"
+        dictionary: "요정"
+        type: noun
+        meanings:
+          ja: "妖精 (曲の最後にアップになるメンバー)"
+        space_after: true
+      - id: p28_b3
+        surface: "누구야?"
+        dictionary: "누구"
+        type: pronoun
+        meanings:
+          ja: "誰"
+        grammar_notes:
+          ja: "누구 (誰) + 야 (〜だ？・タメ口)"
+        space_after: false
+
+  - id: p29
+    korean: "민지 누나 같이 가요"
+    translations:
+      ja:
+        intent: "ミンジ姉さん一緒に行きましょう。"
+        literal: "ミンジ姉さん一緒に行きましょう。"
+    blocks:
+      - id: p29_b1
+        surface: "민지"
+        dictionary: "민지"
+        type: noun
+        meanings:
+          ja: "ミンジ (人名)"
+        space_after: true
+      - id: p29_b2
+        surface: "누나"
+        dictionary: "누나"
+        type: noun
+        meanings:
+          ja: "お姉さん (男性から見た年上の女性)"
+        space_after: true
+      - id: p29_b3
+        surface: "같이"
+        dictionary: "같이"
+        type: adverb
+        meanings:
+          ja: "一緒に"
+        grammar_notes:
+          ja: "発音変化 (가치)"
+        space_after: true
+      - id: p29_b4
+        surface: "가요"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        grammar_notes:
+          ja: "가다 + 아요 (丁寧語の勧誘)"
+        space_after: false
+
+  - id: p30
+    korean: "샘도 팬이야?"
+    translations:
+      ja:
+        intent: "サムもファンなの？"
+        literal: "サムもファンなの？"
+    blocks:
+      - id: p30_b1
+        surface: "샘도"
+        dictionary: "샘"
+        type: noun
+        meanings:
+          ja: "サム (人名)"
+        grammar_notes:
+          ja: "샘 (サム) + 도 (助詞・〜も)"
+        space_after: true
+      - id: p30_b2
+        surface: "팬이야?"
+        dictionary: "팬"
+        type: noun
+        meanings:
+          ja: "ファン"
+        grammar_notes:
+          ja: "팬 (ファン) + 이야 (〜なの？・タメ口)"
+        space_after: false
+
+  - id: p31
+    korean: "포카 교환할까?"
+    translations:
+      ja:
+        intent: "トレカ交換しようか？"
+        literal: "フォトカード交換しようか？"
+    blocks:
+      - id: p31_b1
+        surface: "포카"
+        dictionary: "포카"
+        type: noun
+        meanings:
+          ja: "トレカ (포토카드/フォトカードの略)"
+        space_after: true
+      - id: p31_b2
+        surface: "교환할까?"
+        dictionary: "교환하다"
+        type: verb
+        meanings:
+          ja: "交換する"
+        grammar_notes:
+          ja: "교환하다 + ㄹ까 (勧誘・〜しようか？)"
+        space_after: false
+
+  - id: p32
+    korean: "최애가 누구예요?"
+    translations:
+      ja:
+        intent: "推しは誰ですか？"
+        literal: "最愛は誰ですか？"
+    blocks:
+      - id: p32_b1
+        surface: "최애가"
+        dictionary: "최애"
+        type: noun
+        meanings:
+          ja: "推し (最も愛する人/최고 애정)"
+        grammar_notes:
+          ja: "최애 (推し) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p32_b2
+        surface: "누구예요?"
+        dictionary: "누구"
+        type: pronoun
+        meanings:
+          ja: "誰"
+        grammar_notes:
+          ja: "누구 (誰) + 예요 (〜ですか？・丁寧語)"
+        space_after: false
+
+  - id: p33
+    korean: "지호 알바 가야 돼"
+    translations:
+      ja:
+        intent: "ジホはバイトに行かなきゃ。"
+        literal: "ジホはバイトに行かなければならない。"
+    blocks:
+      - id: p33_b1
+        surface: "지호"
+        dictionary: "지호"
+        type: noun
+        meanings:
+          ja: "지호 (人名)"
+        space_after: true
+      - id: p33_b2
+        surface: "알바"
+        dictionary: "알바"
+        type: noun
+        meanings:
+          ja: "バイト (アルバイトの略)"
+        space_after: true
+      - id: p33_b3
+        surface: "가야"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        grammar_notes:
+          ja: "가다 + 아야 되다 (〜しなければならない)"
+        space_after: true
+      - id: p33_b4
+        surface: "돼"
+        dictionary: "되다"
+        type: verb
+        meanings:
+          ja: "なる / (この場合) しなければならない"
+        grammar_notes:
+          ja: "되다 + 어 -> 돼 (タメ口)"
+        space_after: false
+
+  - id: p34
+    korean: "이번 콘셉트 최고야"
+    translations:
+      ja:
+        intent: "今回のコンセプト最高だよ。"
+        literal: "今回のコンセプト最高だよ。"
+    blocks:
+      - id: p34_b1
+        surface: "이번"
+        dictionary: "이번"
+        type: noun
+        meanings:
+          ja: "今回"
+        space_after: true
+      - id: p34_b2
+        surface: "콘셉트"
+        dictionary: "콘셉트"
+        type: noun
+        meanings:
+          ja: "コンセプト"
+        space_after: true
+      - id: p34_b3
+        surface: "최고야"
+        dictionary: "최고"
+        type: noun
+        meanings:
+          ja: "最高"
+        grammar_notes:
+          ja: "최고 (最高) + 야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p35
+    korean: "유나 직캠 떴어"
+    translations:
+      ja:
+        intent: "ユナのチッケム出たよ。"
+        literal: "ユナのチッケム（推しカメラ）出たよ。"
+    blocks:
+      - id: p35_b1
+        surface: "유나"
+        dictionary: "유나"
+        type: noun
+        meanings:
+          ja: "ユナ (人名)"
+        space_after: true
+      - id: p35_b2
+        surface: "직캠"
+        dictionary: "직캠"
+        type: noun
+        meanings:
+          ja: "チッケム (推し専用カメラ映像)"
+        space_after: true
+      - id: p35_b3
+        surface: "떴어"
+        dictionary: "뜨다"
+        type: verb
+        meanings:
+          ja: "出る / (ネット上に) 上がる"
+        grammar_notes:
+          ja: "뜨다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p36
+    korean: "팬싸인회 언제야?"
+    translations:
+      ja:
+        intent: "サイン会いつ？"
+        literal: "ファンサイン会はいつだ？"
+    blocks:
+      - id: p36_b1
+        surface: "팬싸인회"
+        dictionary: "팬싸인회"
+        type: noun
+        meanings:
+          ja: "ファンサイン会"
+        space_after: true
+      - id: p36_b2
+        surface: "언제야?"
+        dictionary: "언제"
+        type: pronoun
+        meanings:
+          ja: "いつ"
+        grammar_notes:
+          ja: "언제 (いつ) + 야 (〜だ？・タメ口)"
+        space_after: false
+
+  - id: p37
+    korean: "응원법 외웠어?"
+    translations:
+      ja:
+        intent: "掛け声覚えた？"
+        literal: "応援法(掛け声)覚えた？"
+    blocks:
+      - id: p37_b1
+        surface: "응원법"
+        dictionary: "응원법"
+        type: noun
+        meanings:
+          ja: "掛け声 / 応援法"
+        space_after: true
+      - id: p37_b2
+        surface: "외웠어?"
+        dictionary: "외우다"
+        type: verb
+        meanings:
+          ja: "覚える / 暗記する"
+        grammar_notes:
+          ja: "外우다 + 었어 (過去形疑問・タメ口)"
+        space_after: false
+
+  - id: p38
+    korean: "민지 누나가 표 줬어"
+    translations:
+      ja:
+        intent: "ミンジ姉さんがチケットをくれた。"
+        literal: "ミンジ姉さんがチケットをくれた。"
+    blocks:
+      - id: p38_b1
+        surface: "민지"
+        dictionary: "민지"
+        type: noun
+        meanings:
+          ja: "ミンジ (人名)"
+        space_after: true
+      - id: p38_b2
+        surface: "누나가"
+        dictionary: "누나"
+        type: noun
+        meanings:
+          ja: "お姉さん (男性から見た年上の女性)"
+        grammar_notes:
+          ja: "누나 (お姉さん) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p38_b3
+        surface: "표"
+        dictionary: "표"
+        type: noun
+        meanings:
+          ja: "チケット"
+        space_after: true
+      - id: p38_b4
+        surface: "줬어"
+        dictionary: "주다"
+        type: verb
+        meanings:
+          ja: "あげる / くれる"
+        grammar_notes:
+          ja: "주다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p39
+    korean: "유나 메시지 왔어"
+    translations:
+      ja:
+        intent: "ユナからメッセージ来たよ。"
+        literal: "ユナのメッセージが来た。"
+    blocks:
+      - id: p39_b1
+        surface: "유나"
+        dictionary: "유나"
+        type: noun
+        meanings:
+          ja: "ユナ (人名)"
+        space_after: true
+      - id: p39_b2
+        surface: "메시지"
+        dictionary: "메시지"
+        type: noun
+        meanings:
+          ja: "メッセージ"
+        space_after: true
+      - id: p39_b3
+        surface: "왔어"
+        dictionary: "오다"
+        type: verb
+        meanings:
+          ja: "来る"
+        grammar_notes:
+          ja: "오다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p40
+    korean: "다음 주 컴백이야"
+    translations:
+      ja:
+        intent: "来週カムバックだよ。"
+        literal: "来週カムバックだ。"
+    blocks:
+      - id: p40_b1
+        surface: "다음"
+        dictionary: "다음"
+        type: noun
+        meanings:
+          ja: "次"
+        space_after: true
+      - id: p40_b2
+        surface: "주"
+        dictionary: "주"
+        type: noun
+        meanings:
+          ja: "週"
+        space_after: true
+      - id: p40_b3
+        surface: "컴백이야"
+        dictionary: "컴백"
+        type: noun
+        meanings:
+          ja: "カムバック"
+        grammar_notes:
+          ja: "컴백 (カムバック) + 이야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p41
+    korean: "음악 방송 봤어요?"
+    translations:
+      ja:
+        intent: "音楽番組見ましたか？"
+        literal: "音楽放送見ましたか？"
+    blocks:
+      - id: p41_b1
+        surface: "음악"
+        dictionary: "음악"
+        type: noun
+        meanings:
+          ja: "音楽"
+        space_after: true
+      - id: p41_b2
+        surface: "방송"
+        dictionary: "방송"
+        type: noun
+        meanings:
+          ja: "放送 / 番組"
+        space_after: true
+      - id: p41_b3
+        surface: "봤어요?"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 았어요 (過去形疑問・丁寧語)"
+        space_after: false
+
+  - id: p42
+    korean: "의상 예쁘다"
+    translations:
+      ja:
+        intent: "衣装が可愛い。"
+        literal: "衣装綺麗だ。"
+    blocks:
+      - id: p42_b1
+        surface: "의상"
+        dictionary: "의상"
+        type: noun
+        meanings:
+          ja: "衣装"
+        space_after: true
+      - id: p42_b2
+        surface: "예쁘다"
+        dictionary: "예쁘다"
+        type: adjective
+        meanings:
+          ja: "可愛い / 綺麗だ"
+        space_after: false
+
+  - id: p43
+    korean: "가사 외우고 있어"
+    translations:
+      ja:
+        intent: "歌詞を覚えているよ。"
+        literal: "歌詞を覚えてるよ。"
+    blocks:
+      - id: p43_b1
+        surface: "가사"
+        dictionary: "가사"
+        type: noun
+        meanings:
+          ja: "歌詞"
+        space_after: true
+      - id: p43_b2
+        surface: "외우고"
+        dictionary: "외우다"
+        type: verb
+        meanings:
+          ja: "覚える / 暗記する"
+        space_after: true
+      - id: p43_b3
+        surface: "있어"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          ja: "いる (進行形)"
+        grammar_notes:
+          ja: "고 있다 (〜している) のタメ口"
+        space_after: false
+
+  - id: p44
+    korean: "안무 영상 떴어요"
+    translations:
+      ja:
+        intent: "振り付け動画が出ました。"
+        literal: "振り付け映像が出ました。"
+    blocks:
+      - id: p44_b1
+        surface: "안무"
+        dictionary: "안무"
+        type: noun
+        meanings:
+          ja: "振り付け"
+        space_after: true
+      - id: p44_b2
+        surface: "영상"
+        dictionary: "영상"
+        type: noun
+        meanings:
+          ja: "映像 / 動画"
+        space_after: true
+      - id: p44_b3
+        surface: "떴어요"
+        dictionary: "뜨다"
+        type: verb
+        meanings:
+          ja: "出る / (ネット上に) 上がる"
+        grammar_notes:
+          ja: "뜨다 + 었어요 (過去形・丁寧語)"
+        space_after: false
+
+  - id: p45
+    korean: "이번 노래 중독성 있어"
+    translations:
+      ja:
+        intent: "今回の歌、中毒性がある。"
+        literal: "今度の歌は中毒性がある。"
+    blocks:
+      - id: p45_b1
+        surface: "이번"
+        dictionary: "이번"
+        type: noun
+        meanings:
+          ja: "今回"
+        space_after: true
+      - id: p45_b2
+        surface: "노래"
+        dictionary: "노래"
+        type: noun
+        meanings:
+          ja: "歌"
+        space_after: true
+      - id: p45_b3
+        surface: "중독성"
+        dictionary: "중독성"
+        type: noun
+        meanings:
+          ja: "中毒性"
+        space_after: true
+      - id: p45_b4
+        surface: "있어"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          ja: "ある"
+        space_after: false
+
+  - id: p46
+    korean: "막내 너무 귀엽지?"
+    translations:
+      ja:
+        intent: "マンネすごく可愛くない？"
+        literal: "末っ子とても可愛いでしょ？"
+    blocks:
+      - id: p46_b1
+        surface: "막내"
+        dictionary: "막내"
+        type: noun
+        meanings:
+          ja: "末っ子 (マンネ)"
+        space_after: true
+      - id: p46_b2
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても"
+        space_after: true
+      - id: p46_b3
+        surface: "귀엽지?"
+        dictionary: "귀엽다"
+        type: adjective
+        meanings:
+          ja: "可愛い"
+        grammar_notes:
+          ja: "귀엽다 + 지? (〜でしょ？・同意を求める)"
+        space_after: false
+
+  - id: p47
+    korean: "음원 순위 올랐어"
+    translations:
+      ja:
+        intent: "音源ランキング上がったよ。"
+        literal: "音源順位上がったよ。"
+    blocks:
+      - id: p47_b1
+        surface: "음원"
+        dictionary: "음원"
+        type: noun
+        meanings:
+          ja: "音源"
+        space_after: true
+      - id: p47_b2
+        surface: "순위"
+        dictionary: "순위"
+        type: noun
+        meanings:
+          ja: "順位 / ランキング"
+        space_after: true
+      - id: p47_b3
+        surface: "올랐어"
+        dictionary: "오르다"
+        type: verb
+        meanings:
+          ja: "上がる"
+        grammar_notes:
+          ja: "르不規則活用 (오르다 + 았어 -> 올랐어)"
+        space_after: false
+
+  - id: p48
+    korean: "방송국에 사람 많아"
+    translations:
+      ja:
+        intent: "放送局に人が多いよ。"
+        literal: "放送局に人が多い。"
+    blocks:
+      - id: p48_b1
+        surface: "방송국에"
+        dictionary: "방송국"
+        type: noun
+        meanings:
+          ja: "放送局"
+        grammar_notes:
+          ja: "방송국 (放送局) + 에 (助詞・〜に)"
+        space_after: true
+      - id: p48_b2
+        surface: "사람"
+        dictionary: "사람"
+        type: noun
+        meanings:
+          ja: "人"
+        space_after: true
+      - id: p48_b3
+        surface: "많아"
+        dictionary: "많다"
+        type: adjective
+        meanings:
+          ja: "多い"
+        grammar_notes:
+          ja: "많다 + 아 (タメ口)"
+        space_after: false
+
+  - id: p49
+    korean: "밤새 스트리밍 했어"
+    translations:
+      ja:
+        intent: "徹夜でスミンしたよ。"
+        literal: "徹夜でストリーミングしたよ。"
+    blocks:
+      - id: p49_b1
+        surface: "밤새"
+        dictionary: "밤새"
+        type: adverb
+        meanings:
+          ja: "夜通し / 徹夜で"
+        space_after: true
+      - id: p49_b2
+        surface: "스트리밍"
+        dictionary: "스트리밍"
+        type: noun
+        meanings:
+          ja: "ストリーミング (スミン)"
+        space_after: true
+      - id: p49_b3
+        surface: "했어"
+        dictionary: "하다"
+        type: verb
+        meanings:
+          ja: "する"
+        grammar_notes:
+          ja: "하다 + 였어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p50
+    korean: "나도 데려가"
+    translations:
+      ja:
+        intent: "私も連れて行って。"
+        literal: "私も連れてって。"
+    blocks:
+      - id: p50_b1
+        surface: "나도"
+        dictionary: "나"
+        type: pronoun
+        meanings:
+          ja: "私"
+        grammar_notes:
+          ja: "나 (私) + 도 (助詞・〜も)"
+        space_after: true
+      - id: p50_b2
+        surface: "데려가"
+        dictionary: "데려가다"
+        type: verb
+        meanings:
+          ja: "連れて行く"
+        grammar_notes:
+          ja: "데려가다 + 아 (命令形・タメ口)"
+        space_after: false
+
+  - id: p51
+    korean: "메인 보컬 최고야"
+    translations:
+      ja:
+        intent: "メインボーカル最高だよ。"
+        literal: "メインボーカル最高だ。"
+    blocks:
+      - id: p51_b1
+        surface: "메인"
+        dictionary: "메인"
+        type: noun
+        meanings:
+          ja: "メイン"
+        space_after: true
+      - id: p51_b2
+        surface: "보컬"
+        dictionary: "보컬"
+        type: noun
+        meanings:
+          ja: "ボーカル"
+        space_after: true
+      - id: p51_b3
+        surface: "최고야"
+        dictionary: "최고"
+        type: noun
+        meanings:
+          ja: "最高"
+        grammar_notes:
+          ja: "최고 (最高) + 야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p52
+    korean: "컴백 무대 기대돼"
+    translations:
+      ja:
+        intent: "カムバックステージ楽しみ。"
+        literal: "カムバックのステージが期待される。"
+    blocks:
+      - id: p52_b1
+        surface: "컴백"
+        dictionary: "컴백"
+        type: noun
+        meanings:
+          ja: "カムバック"
+        space_after: true
+      - id: p52_b2
+        surface: "무대"
+        dictionary: "무대"
+        type: noun
+        meanings:
+          ja: "舞台 / ステージ"
+        space_after: true
+      - id: p52_b3
+        surface: "기대돼"
+        dictionary: "기대되다"
+        type: verb
+        meanings:
+          ja: "期待される / 楽しみだ"
+        grammar_notes:
+          ja: "기대되다 + 어 (タメ口)"
+        space_after: false
+
+  - id: p53
+    korean: "차애 누구야?"
+    translations:
+      ja:
+        intent: "2番目の推しは誰？"
+        literal: "次愛は誰だ？"
+    blocks:
+      - id: p53_b1
+        surface: "차애"
+        dictionary: "차애"
+        type: noun
+        meanings:
+          ja: "2番目の推し (次愛)"
+        space_after: true
+      - id: p53_b2
+        surface: "누구야?"
+        dictionary: "누구"
+        type: pronoun
+        meanings:
+          ja: "誰"
+        grammar_notes:
+          ja: "누구 (誰) + 야 (〜だ？・タメ口)"
+        space_after: false
+
+  - id: p54
+    korean: "입덕 직캠 봤어?"
+    translations:
+      ja:
+        intent: "オタク入門チッケム見た？"
+        literal: "入オタチッケム見た？"
+    blocks:
+      - id: p54_b1
+        surface: "입덕"
+        dictionary: "입덕"
+        type: noun
+        meanings:
+          ja: "オタクになること (入徳)"
+        space_after: true
+      - id: p54_b2
+        surface: "직캠"
+        dictionary: "직캠"
+        type: noun
+        meanings:
+          ja: "チッケム (推し専用カメラ映像)"
+        space_after: true
+      - id: p54_b3
+        surface: "봤어?"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p55
+    korean: "공식 굿즈 샀어요"
+    translations:
+      ja:
+        intent: "公式グッズ買いました。"
+        literal: "公式グッズ買いました。"
+    blocks:
+      - id: p55_b1
+        surface: "공식"
+        dictionary: "공식"
+        type: noun
+        meanings:
+          ja: "公式"
+        space_after: true
+      - id: p55_b2
+        surface: "굿즈"
+        dictionary: "굿즈"
+        type: noun
+        meanings:
+          ja: "グッズ"
+        space_after: true
+      - id: p55_b3
+        surface: "샀어요"
+        dictionary: "사다"
+        type: verb
+        meanings:
+          ja: "買う"
+        grammar_notes:
+          ja: "사다 + 았어요 (過去形・丁寧語)"
+        space_after: false
+
+  - id: p56
+    korean: "티켓팅 성공했어요?"
+    translations:
+      ja:
+        intent: "チケッティング成功しましたか？"
+        literal: "チケッティング成功しましたか？"
+    blocks:
+      - id: p56_b1
+        surface: "티켓팅"
+        dictionary: "티켓팅"
+        type: noun
+        meanings:
+          ja: "チケッティング (チケット争奪戦)"
+        space_after: true
+      - id: p56_b2
+        surface: "성공했어요?"
+        dictionary: "성공하다"
+        type: verb
+        meanings:
+          ja: "成功する"
+        grammar_notes:
+          ja: "성공하다 + 였어요 (過去形疑問・丁寧語)"
+        space_after: false
+
+  - id: p57
+    korean: "서버 터졌어"
+    translations:
+      ja:
+        intent: "サーバーが落ちた。"
+        literal: "サーバーが破裂した。"
+    blocks:
+      - id: p57_b1
+        surface: "서버"
+        dictionary: "서버"
+        type: noun
+        meanings:
+          ja: "サーバー"
+        space_after: true
+      - id: p57_b2
+        surface: "터졌어"
+        dictionary: "터지다"
+        type: verb
+        meanings:
+          ja: "破裂する / (サーバーが)落ちる"
+        grammar_notes:
+          ja: "터지다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p58
+    korean: "스밍 돌리고 자야지"
+    translations:
+      ja:
+        intent: "スミン回して寝なきゃ。"
+        literal: "ストリーミング回して寝ないと。"
+    blocks:
+      - id: p58_b1
+        surface: "스밍"
+        dictionary: "스밍"
+        type: noun
+        meanings:
+          ja: "スミン (ストリーミングの略)"
+        space_after: true
+      - id: p58_b2
+        surface: "돌리고"
+        dictionary: "돌리다"
+        type: verb
+        meanings:
+          ja: "回す"
+        space_after: true
+      - id: p58_b3
+        surface: "자야지"
+        dictionary: "자다"
+        type: verb
+        meanings:
+          ja: "寝る"
+        grammar_notes:
+          ja: "자다 + 아야지 (〜しなければ・意思)"
+        space_after: false
+
+  - id: p59
+    korean: "응원봉 챙겼어?"
+    translations:
+      ja:
+        intent: "ペンライト持った？"
+        literal: "応援棒まとめましたか？"
+    blocks:
+      - id: p59_b1
+        surface: "응원봉"
+        dictionary: "응원봉"
+        type: noun
+        meanings:
+          ja: "ペンライト (応援棒)"
+        space_after: true
+      - id: p59_b2
+        surface: "챙겼어?"
+        dictionary: "챙기다"
+        type: verb
+        meanings:
+          ja: "準備する / 用意する / 持っていく"
+        grammar_notes:
+          ja: "챙기다 + 었어 (過去形疑問・タメ口)"
+        space_after: false
+
+  - id: p60
+    korean: "오늘 방송 꼭 봐"
+    translations:
+      ja:
+        intent: "今日の放送絶対見てね。"
+        literal: "今日の放送必ず見ろ。"
+    blocks:
+      - id: p60_b1
+        surface: "오늘"
+        dictionary: "오늘"
+        type: noun
+        meanings:
+          ja: "今日"
+        space_after: true
+      - id: p60_b2
+        surface: "방송"
+        dictionary: "방송"
+        type: noun
+        meanings:
+          ja: "放送 / 番組"
+        space_after: true
+      - id: p60_b3
+        surface: "꼭"
+        dictionary: "꼭"
+        type: adverb
+        meanings:
+          ja: "必ず / 絶対に"
+        space_after: true
+      - id: p60_b4
+        surface: "봐"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 아 (命令形・タメ口)"
+        space_after: false
+
+  - id: p61
+    korean: "첫 1위 축하해!"
+    translations:
+      ja:
+        intent: "初1位おめでとう！"
+        literal: "最初の1位おめでとう！"
+    blocks:
+      - id: p61_b1
+        surface: "첫"
+        dictionary: "첫"
+        type: determiner
+        meanings:
+          ja: "初めての / 最初の"
+        space_after: true
+      - id: p61_b2
+        surface: "1위"
+        dictionary: "1위"
+        type: noun
+        meanings:
+          ja: "1位"
+        space_after: true
+      - id: p61_b3
+        surface: "축하해!"
+        dictionary: "축하하다"
+        type: verb
+        meanings:
+          ja: "お祝いする"
+        grammar_notes:
+          ja: "축하하다 + 여 (タメ口)"
+        space_after: false
+
+  - id: p62
+    korean: "스케줄 너무 바빠"
+    translations:
+      ja:
+        intent: "スケジュールが忙しすぎる。"
+        literal: "スケジュールとても忙しい。"
+    blocks:
+      - id: p62_b1
+        surface: "스케줄"
+        dictionary: "스케줄"
+        type: noun
+        meanings:
+          ja: "スケジュール"
+        space_after: true
+      - id: p62_b2
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても / あまりにも"
+        space_after: true
+      - id: p62_b3
+        surface: "바빠"
+        dictionary: "바쁘다"
+        type: adjective
+        meanings:
+          ja: "忙しい"
+        grammar_notes:
+          ja: "으不規則活用 (바쁘다 + 아 -> 바빠)"
+        space_after: false
+
+  - id: p63
+    korean: "헤어 스타일 바꿨네"
+    translations:
+      ja:
+        intent: "ヘアスタイル変えたね。"
+        literal: "ヘアスタイル変えたね。"
+    blocks:
+      - id: p63_b1
+        surface: "헤어"
+        dictionary: "헤어"
+        type: noun
+        meanings:
+          ja: "ヘア / 髪"
+        space_after: true
+      - id: p63_b2
+        surface: "스타일"
+        dictionary: "스타일"
+        type: noun
+        meanings:
+          ja: "スタイル"
+        space_after: true
+      - id: p63_b3
+        surface: "바꿨네"
+        dictionary: "바꾸다"
+        type: verb
+        meanings:
+          ja: "変える"
+        grammar_notes:
+          ja: "바꾸다 + 었네 (過去形＋感嘆の네)"
+        space_after: false
+
+  - id: p64
+    korean: "퇴근길 사진 봤어?"
+    translations:
+      ja:
+        intent: "退勤の時の写真見た？"
+        literal: "退勤道の写真見た？"
+    blocks:
+      - id: p64_b1
+        surface: "퇴근길"
+        dictionary: "퇴근길"
+        type: noun
+        meanings:
+          ja: "退勤する道中 (出待ちの時などによく使われる)"
+        space_after: true
+      - id: p64_b2
+        surface: "사진"
+        dictionary: "사진"
+        type: noun
+        meanings:
+          ja: "写真"
+        space_after: true
+      - id: p64_b3
+        surface: "봤어?"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p65
+    korean: "어제 라방 했어?"
+    translations:
+      ja:
+        intent: "昨日ライブ放送した？"
+        literal: "昨日ラバンした？"
+    blocks:
+      - id: p65_b1
+        surface: "어제"
+        dictionary: "어제"
+        type: noun
+        meanings:
+          ja: "昨日"
+        space_after: true
+      - id: p65_b2
+        surface: "라방"
+        dictionary: "라방"
+        type: noun
+        meanings:
+          ja: "ライブ放送 (라이브 방송の略)"
+        space_after: true
+      - id: p65_b3
+        surface: "했어?"
+        dictionary: "하다"
+        type: verb
+        meanings:
+          ja: "する"
+        grammar_notes:
+          ja: "하다 + 였어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p66
+    korean: "나도 가고 싶었는데"
+    translations:
+      ja:
+        intent: "私も行きたかったのに。"
+        literal: "私も行きたかったのに。"
+    blocks:
+      - id: p66_b1
+        surface: "나도"
+        dictionary: "나"
+        type: pronoun
+        meanings:
+          ja: "私"
+        grammar_notes:
+          ja: "나 (私) + 도 (助詞・〜も)"
+        space_after: true
+      - id: p66_b2
+        surface: "가고"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        space_after: true
+      - id: p66_b3
+        surface: "싶었는데"
+        dictionary: "싶다"
+        type: adjective
+        meanings:
+          ja: "〜したい"
+        grammar_notes:
+          ja: "고 싶다 (〜したい) ＋ 었는데 (過去形＋逆接/状況説明の〜のに)"
+        space_after: false
+
+  - id: p67
+    korean: "자리가 안 보여"
+    translations:
+      ja:
+        intent: "席が見えない。"
+        literal: "席が見えない。"
+    blocks:
+      - id: p67_b1
+        surface: "자리가"
+        dictionary: "자리"
+        type: noun
+        meanings:
+          ja: "席 / 場所"
+        grammar_notes:
+          ja: "자리 (席) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p67_b2
+        surface: "안"
+        dictionary: "안"
+        type: adverb
+        meanings:
+          ja: "〜ない (否定)"
+        space_after: true
+      - id: p67_b3
+        surface: "보여"
+        dictionary: "보이다"
+        type: verb
+        meanings:
+          ja: "見える"
+        grammar_notes:
+          ja: "보이다 + 어 (タメ口)"
+        space_after: false
+
+  - id: p68
+    korean: "카메라 찾고 있어"
+    translations:
+      ja:
+        intent: "カメラを探しているよ。"
+        literal: "カメラを探している。"
+    blocks:
+      - id: p68_b1
+        surface: "카메라"
+        dictionary: "카메라"
+        type: noun
+        meanings:
+          ja: "カメラ"
+        space_after: true
+      - id: p68_b2
+        surface: "찾고"
+        dictionary: "찾다"
+        type: verb
+        meanings:
+          ja: "探す"
+        space_after: true
+      - id: p68_b3
+        surface: "있어"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          ja: "いる (進行形)"
+        grammar_notes:
+          ja: "고 있다 (〜している) のタメ口"
+        space_after: false
+
+  - id: p69
+    korean: "이 노래 눈물 나"
+    translations:
+      ja:
+        intent: "この歌、涙が出る。"
+        literal: "この歌涙が出る。"
+    blocks:
+      - id: p69_b1
+        surface: "이"
+        dictionary: "이"
+        type: determiner
+        meanings:
+          ja: "この"
+        space_after: true
+      - id: p69_b2
+        surface: "노래"
+        dictionary: "노래"
+        type: noun
+        meanings:
+          ja: "歌"
+        space_after: true
+      - id: p69_b3
+        surface: "눈물"
+        dictionary: "눈물"
+        type: noun
+        meanings:
+          ja: "涙"
+        space_after: true
+      - id: p69_b4
+        surface: "나"
+        dictionary: "나다"
+        type: verb
+        meanings:
+          ja: "出る / 生じる"
+        space_after: false
+
+  - id: p70
+    korean: "너무 떨려요"
+    translations:
+      ja:
+        intent: "すごく緊張します。"
+        literal: "とても震えます。"
+    blocks:
+      - id: p70_b1
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても / あまりにも"
+        space_after: true
+      - id: p70_b2
+        surface: "떨려요"
+        dictionary: "떨리다"
+        type: verb
+        meanings:
+          ja: "緊張する / 震える"
+        grammar_notes:
+          ja: "떨리다 + 어요 (丁寧語)"
+        space_after: false
+
+  - id: p71
+    korean: "팬클럽 가입 시기야"
+    translations:
+      ja:
+        intent: "ファンクラブ加入時期だよ。"
+        literal: "ファンクラブ加入時期だ。"
+    blocks:
+      - id: p71_b1
+        surface: "팬클럽"
+        dictionary: "팬클럽"
+        type: noun
+        meanings:
+          ja: "ファンクラブ"
+        space_after: true
+      - id: p71_b2
+        surface: "가입"
+        dictionary: "가입"
+        type: noun
+        meanings:
+          ja: "加入"
+        space_after: true
+      - id: p71_b3
+        surface: "시기야"
+        dictionary: "시기"
+        type: noun
+        meanings:
+          ja: "時期"
+        grammar_notes:
+          ja: "시기 (時期) + 야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p72
+    korean: "사인회 당첨됐어요!"
+    translations:
+      ja:
+        intent: "サイン会当選しました！"
+        literal: "サイン会に当選しました。"
+    blocks:
+      - id: p72_b1
+        surface: "사인회"
+        dictionary: "사인회"
+        type: noun
+        meanings:
+          ja: "サイン会"
+        space_after: true
+      - id: p72_b2
+        surface: "당첨됐어요!"
+        dictionary: "당첨되다"
+        type: verb
+        meanings:
+          ja: "当選する"
+        grammar_notes:
+          ja: "당첨되다 + 었어요 (過去形・丁寧語)"
+        space_after: false
+
+  - id: p73
+    korean: "편지 썼어요"
+    translations:
+      ja:
+        intent: "手紙を書きました。"
+        literal: "手紙を書きました。"
+    blocks:
+      - id: p73_b1
+        surface: "편지"
+        dictionary: "편지"
+        type: noun
+        meanings:
+          ja: "手紙"
+        space_after: true
+      - id: p73_b2
+        surface: "썼어요"
+        dictionary: "쓰다"
+        type: verb
+        meanings:
+          ja: "書く"
+        grammar_notes:
+          ja: "쓰다 + 었어요 (으変則活用・過去形・丁寧語)"
+        space_after: false
+
+  - id: p74
+    korean: "유나 방송 시간 언제야?"
+    translations:
+      ja:
+        intent: "ユナの放送時間いつ？"
+        literal: "ユナの放送時間いつだ？"
+    blocks:
+      - id: p74_b1
+        surface: "유나"
+        dictionary: "유나"
+        type: noun
+        meanings:
+          ja: "ユナ (人名)"
+        space_after: true
+      - id: p74_b2
+        surface: "방송"
+        dictionary: "방송"
+        type: noun
+        meanings:
+          ja: "放送 / 番組"
+        space_after: true
+      - id: p74_b3
+        surface: "시간"
+        dictionary: "시간"
+        type: noun
+        meanings:
+          ja: "時間"
+        space_after: true
+      - id: p74_b4
+        surface: "언제야?"
+        dictionary: "언제"
+        type: pronoun
+        meanings:
+          ja: "いつ"
+        grammar_notes:
+          ja: "언제 (いつ) + 야 (〜だ？・タメ口)"
+        space_after: false
+
+  - id: p75
+    korean: "지호는 또 영상 봐"
+    translations:
+      ja:
+        intent: "ジホはまた動画見てる。"
+        literal: "ジホはまた映像を見る。"
+    blocks:
+      - id: p75_b1
+        surface: "지호는"
+        dictionary: "지호"
+        type: noun
+        meanings:
+          ja: "ジホ (人名)"
+        grammar_notes:
+          ja: "지호 (ジホ) + 는 (主題助詞・〜は)"
+        space_after: true
+      - id: p75_b2
+        surface: "또"
+        dictionary: "또"
+        type: adverb
+        meanings:
+          ja: "また"
+        space_after: true
+      - id: p75_b3
+        surface: "영상"
+        dictionary: "영상"
+        type: noun
+        meanings:
+          ja: "映像 / 動画"
+        space_after: true
+      - id: p75_b4
+        surface: "봐"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 아 (タメ口)"
+        space_after: false
+
+  - id: p76
+    korean: "민지 언니가 알려줬어"
+    translations:
+      ja:
+        intent: "ミンジお姉さんが教えてくれた。"
+        literal: "ミンジお姉さんが教えてくれた。"
+    blocks:
+      - id: p76_b1
+        surface: "민지"
+        dictionary: "민지"
+        type: noun
+        meanings:
+          ja: "ミンジ (人名)"
+        space_after: true
+      - id: p76_b2
+        surface: "언니가"
+        dictionary: "언니"
+        type: noun
+        meanings:
+          ja: "お姉さん (女性から見た年上の女性)"
+        grammar_notes:
+          ja: "언니 (お姉さん) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p76_b3
+        surface: "알려줬어"
+        dictionary: "알려주다"
+        type: verb
+        meanings:
+          ja: "教えてくれる"
+        grammar_notes:
+          ja: "알려주다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p77
+    korean: "이번 안무 어려워"
+    translations:
+      ja:
+        intent: "今回の振り付け難しい。"
+        literal: "今回の振り付け難しい。"
+    blocks:
+      - id: p77_b1
+        surface: "이번"
+        dictionary: "이번"
+        type: noun
+        meanings:
+          ja: "今回"
+        space_after: true
+      - id: p77_b2
+        surface: "안무"
+        dictionary: "안무"
+        type: noun
+        meanings:
+          ja: "振り付け"
+        space_after: true
+      - id: p77_b3
+        surface: "어려워"
+        dictionary: "어렵다"
+        type: adjective
+        meanings:
+          ja: "難しい"
+        grammar_notes:
+          ja: "ㅂ変則活用 (어렵다 + 어 -> 어려워)"
+        space_after: false
+
+  - id: p78
+    korean: "얼굴 천재야"
+    translations:
+      ja:
+        intent: "顔天才だよ。"
+        literal: "顔天才だ。"
+    blocks:
+      - id: p78_b1
+        surface: "얼굴"
+        dictionary: "얼굴"
+        type: noun
+        meanings:
+          ja: "顔"
+        space_after: true
+      - id: p78_b2
+        surface: "천재야"
+        dictionary: "천재"
+        type: noun
+        meanings:
+          ja: "天才 (顔天才=すごくイケメン/美女のこと)"
+        grammar_notes:
+          ja: "천재 (天才) + 야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p79
+    korean: "같이 덕질하자"
+    translations:
+      ja:
+        intent: "一緒に推し活しよう。"
+        literal: "一緒にオタ活しよう。"
+    blocks:
+      - id: p79_b1
+        surface: "같이"
+        dictionary: "같이"
+        type: adverb
+        meanings:
+          ja: "一緒に"
+        grammar_notes:
+          ja: "発音変化 (가치)"
+        space_after: true
+      - id: p79_b2
+        surface: "덕질하자"
+        dictionary: "덕질하다"
+        type: verb
+        meanings:
+          ja: "推し活をする / オタ活をする"
+        grammar_notes:
+          ja: "덕질하다 + 자 (勧誘・タメ口)"
+        space_after: false
+
+  - id: p80
+    korean: "팬카페에 글 남겼어"
+    translations:
+      ja:
+        intent: "ファンカフェに書き込みしたよ。"
+        literal: "ファンカフェに文章を残した。"
+    blocks:
+      - id: p80_b1
+        surface: "팬카페에"
+        dictionary: "팬카페"
+        type: noun
+        meanings:
+          ja: "ファンカフェ"
+        grammar_notes:
+          ja: "팬카페 (ファンカフェ) + 에 (助詞・〜に)"
+        space_after: true
+      - id: p80_b2
+        surface: "글"
+        dictionary: "글"
+        type: noun
+        meanings:
+          ja: "文章 / 書き込み"
+        space_after: true
+      - id: p80_b3
+        surface: "남겼어"
+        dictionary: "남기다"
+        type: verb
+        meanings:
+          ja: "残す"
+        grammar_notes:
+          ja: "남기다 + 었어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p81
+    korean: "티저 떴어요!"
+    translations:
+      ja:
+        intent: "ティーザー出ました！"
+        literal: "ティーザー出ました！"
+    blocks:
+      - id: p81_b1
+        surface: "티저"
+        dictionary: "티저"
+        type: noun
+        meanings:
+          ja: "ティーザー"
+        space_after: true
+      - id: p81_b2
+        surface: "떴어요!"
+        dictionary: "뜨다"
+        type: verb
+        meanings:
+          ja: "出る / (ネット上に) 上がる"
+        grammar_notes:
+          ja: "뜨다 + 었어요 (過去形・丁寧語)"
+        space_after: false
+
+  - id: p82
+    korean: "조회수 천만 넘어"
+    translations:
+      ja:
+        intent: "再生回数1000万超えたよ。"
+        literal: "再生回数千万超える。"
+    blocks:
+      - id: p82_b1
+        surface: "조회수"
+        dictionary: "조회수"
+        type: noun
+        meanings:
+          ja: "再生回数 / 閲覧数"
+        space_after: true
+      - id: p82_b2
+        surface: "천만"
+        dictionary: "천만"
+        type: noun
+        meanings:
+          ja: "千万"
+        space_after: true
+      - id: p82_b3
+        surface: "넘어"
+        dictionary: "넘다"
+        type: verb
+        meanings:
+          ja: "超える"
+        grammar_notes:
+          ja: "넘다 + 어 (タメ口)"
+        space_after: false
+
+  - id: p83
+    korean: "멜로디가 너무 슬퍼"
+    translations:
+      ja:
+        intent: "メロディがとても悲しい。"
+        literal: "メロディがとても悲しい。"
+    blocks:
+      - id: p83_b1
+        surface: "멜로디가"
+        dictionary: "멜로디"
+        type: noun
+        meanings:
+          ja: "メロディ"
+        grammar_notes:
+          ja: "멜로디 (メロディ) + 가 (主格助詞・〜が)"
+        space_after: true
+      - id: p83_b2
+        surface: "너무"
+        dictionary: "너무"
+        type: adverb
+        meanings:
+          ja: "とても"
+        space_after: true
+      - id: p83_b3
+        surface: "슬퍼"
+        dictionary: "슬프다"
+        type: adjective
+        meanings:
+          ja: "悲しい"
+        grammar_notes:
+          ja: "으不規則活用 (슬프다 + 어 -> 슬퍼)"
+        space_after: false
+
+  - id: p84
+    korean: "리더 언니 멋있어"
+    translations:
+      ja:
+        intent: "リーダーのお姉さんかっこいい。"
+        literal: "リーダーお姉さんかっこいい。"
+    blocks:
+      - id: p84_b1
+        surface: "리더"
+        dictionary: "리더"
+        type: noun
+        meanings:
+          ja: "リーダー"
+        space_after: true
+      - id: p84_b2
+        surface: "언니"
+        dictionary: "언니"
+        type: noun
+        meanings:
+          ja: "お姉さん"
+        space_after: true
+      - id: p84_b3
+        surface: "멋있어"
+        dictionary: "멋있다"
+        type: adjective
+        meanings:
+          ja: "かっこいい / 素敵だ"
+        grammar_notes:
+          ja: "멋있다 + 어 (タメ口)"
+        space_after: false
+
+  - id: p85
+    korean: "다음 곡 기대돼요"
+    translations:
+      ja:
+        intent: "次の曲が楽しみです。"
+        literal: "次の曲期待されます。"
+    blocks:
+      - id: p85_b1
+        surface: "다음"
+        dictionary: "다음"
+        type: noun
+        meanings:
+          ja: "次"
+        space_after: true
+      - id: p85_b2
+        surface: "곡"
+        dictionary: "곡"
+        type: noun
+        meanings:
+          ja: "曲"
+        space_after: true
+      - id: p85_b3
+        surface: "기대돼요"
+        dictionary: "기대되다"
+        type: verb
+        meanings:
+          ja: "期待される / 楽しみだ"
+        grammar_notes:
+          ja: "기대되다 + 어요 (丁寧語)"
+        space_after: false
+
+  - id: p86
+    korean: "샘 표정 봐"
+    translations:
+      ja:
+        intent: "サムの顔見て。"
+        literal: "サムの表情見ろ。"
+    blocks:
+      - id: p86_b1
+        surface: "샘"
+        dictionary: "샘"
+        type: noun
+        meanings:
+          ja: "サム (人名)"
+        space_after: true
+      - id: p86_b2
+        surface: "표정"
+        dictionary: "표정"
+        type: noun
+        meanings:
+          ja: "表情"
+        space_after: true
+      - id: p86_b3
+        surface: "봐"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る"
+        grammar_notes:
+          ja: "보다 + 아 (命令形・タメ口)"
+        space_after: false
+
+  - id: p87
+    korean: "왜 벌써 끝나?"
+    translations:
+      ja:
+        intent: "どうしてもう終わるの？"
+        literal: "なぜすでに終わるの？"
+    blocks:
+      - id: p87_b1
+        surface: "왜"
+        dictionary: "왜"
+        type: adverb
+        meanings:
+          ja: "なぜ / どうして"
+        space_after: true
+      - id: p87_b2
+        surface: "벌써"
+        dictionary: "벌써"
+        type: adverb
+        meanings:
+          ja: "もう / すでに"
+        space_after: true
+      - id: p87_b3
+        surface: "끝나?"
+        dictionary: "끝나다"
+        type: verb
+        meanings:
+          ja: "終わる"
+        grammar_notes:
+          ja: "끝나다 + 아 (疑問・タメ口)"
+        space_after: false
+
+  - id: p88
+    korean: "무대 위에서 빛나"
+    translations:
+      ja:
+        intent: "ステージの上で輝いてる。"
+        literal: "舞台の上で輝く。"
+    blocks:
+      - id: p88_b1
+        surface: "무대"
+        dictionary: "무대"
+        type: noun
+        meanings:
+          ja: "舞台 / ステージ"
+        space_after: true
+      - id: p88_b2
+        surface: "위에서"
+        dictionary: "위"
+        type: noun
+        meanings:
+          ja: "上"
+        grammar_notes:
+          ja: "위 (上) + 에서 (助詞・〜で)"
+        space_after: true
+      - id: p88_b3
+        surface: "빛나"
+        dictionary: "빛나다"
+        type: verb
+        meanings:
+          ja: "輝く"
+        grammar_notes:
+          ja: "빛나다 + 아 (タメ口)"
+        space_after: false
+
+  - id: p89
+    korean: "콘서트 갈 사람?"
+    translations:
+      ja:
+        intent: "コンサート行く人？"
+        literal: "コンサート行く人？"
+    blocks:
+      - id: p89_b1
+        surface: "콘서트"
+        dictionary: "콘서트"
+        type: noun
+        meanings:
+          ja: "コンサート"
+        space_after: true
+      - id: p89_b2
+        surface: "갈"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        grammar_notes:
+          ja: "가다 + ㄹ (未来連体形・行く〜)"
+        space_after: true
+      - id: p89_b3
+        surface: "사람?"
+        dictionary: "사람"
+        type: noun
+        meanings:
+          ja: "人"
+        space_after: false
+
+  - id: p90
+    korean: "혼자서 못 가"
+    translations:
+      ja:
+        intent: "一人じゃ行けない。"
+        literal: "一人で行けない。"
+    blocks:
+      - id: p90_b1
+        surface: "혼자서"
+        dictionary: "혼자"
+        type: noun
+        meanings:
+          ja: "一人で (서は強調・状態を表す)"
+        space_after: true
+      - id: p90_b2
+        surface: "못"
+        dictionary: "못"
+        type: adverb
+        meanings:
+          ja: "〜できない"
+        space_after: true
+      - id: p90_b3
+        surface: "가"
+        dictionary: "가다"
+        type: verb
+        meanings:
+          ja: "行く"
+        grammar_notes:
+          ja: "가다 + 아 (タメ口)"
+        space_after: false
+
+  - id: p91
+    korean: "지금 앨범깡 해"
+    translations:
+      ja:
+        intent: "今アルバム開封してるよ。"
+        literal: "今アルバム開封してる。"
+    blocks:
+      - id: p91_b1
+        surface: "지금"
+        dictionary: "지금"
+        type: noun
+        meanings:
+          ja: "今"
+        space_after: true
+      - id: p91_b2
+        surface: "앨범깡"
+        dictionary: "앨범깡"
+        type: noun
+        meanings:
+          ja: "アルバムの開封 (グッズ当落の確認など)"
+        space_after: true
+      - id: p91_b3
+        surface: "해"
+        dictionary: "하다"
+        type: verb
+        meanings:
+          ja: "する"
+        grammar_notes:
+          ja: "하다 + 여 (タメ口)"
+        space_after: false
+
+  - id: p92
+    korean: "이 노래 추천해"
+    translations:
+      ja:
+        intent: "この歌おすすめだよ。"
+        literal: "この歌推薦する。"
+    blocks:
+      - id: p92_b1
+        surface: "이"
+        dictionary: "이"
+        type: determiner
+        meanings:
+          ja: "この"
+        space_after: true
+      - id: p92_b2
+        surface: "노래"
+        dictionary: "노래"
+        type: noun
+        meanings:
+          ja: "歌"
+        space_after: true
+      - id: p92_b3
+        surface: "추천해"
+        dictionary: "추천하다"
+        type: verb
+        meanings:
+          ja: "推薦する / おすすめする"
+        grammar_notes:
+          ja: "추천하다 + 여 (タメ口)"
+        space_after: false
+
+  - id: p93
+    korean: "매일 듣고 있어"
+    translations:
+      ja:
+        intent: "毎日聞いてるよ。"
+        literal: "毎日聞いている。"
+    blocks:
+      - id: p93_b1
+        surface: "매일"
+        dictionary: "매일"
+        type: noun
+        meanings:
+          ja: "毎日"
+        space_after: true
+      - id: p93_b2
+        surface: "듣고"
+        dictionary: "듣다"
+        type: verb
+        meanings:
+          ja: "聞く"
+        space_after: true
+      - id: p93_b3
+        surface: "있어"
+        dictionary: "있다"
+        type: verb
+        meanings:
+          ja: "いる (進行形)"
+        grammar_notes:
+          ja: "고 있다 (〜している) のタメ口"
+        space_after: false
+
+  - id: p94
+    korean: "지호 울지 마"
+    translations:
+      ja:
+        intent: "ジホ、泣かないで。"
+        literal: "ジホ泣くな。"
+    blocks:
+      - id: p94_b1
+        surface: "지호"
+        dictionary: "지호"
+        type: noun
+        meanings:
+          ja: "ジホ (人名)"
+        space_after: true
+      - id: p94_b2
+        surface: "울지"
+        dictionary: "울다"
+        type: verb
+        meanings:
+          ja: "泣く"
+        space_after: true
+      - id: p94_b3
+        surface: "마"
+        dictionary: "말다"
+        type: verb
+        meanings:
+          ja: "やめる / 〜しない"
+        grammar_notes:
+          ja: "지 말다 (〜しない) の命令形・タメ口"
+        space_after: false
+
+  - id: p95
+    korean: "역대급 무대야"
+    translations:
+      ja:
+        intent: "歴代級のステージだよ。"
+        literal: "歴代級の舞台だ。"
+    blocks:
+      - id: p95_b1
+        surface: "역대급"
+        dictionary: "역대급"
+        type: noun
+        meanings:
+          ja: "歴代級 (過去最高レベル)"
+        space_after: true
+      - id: p95_b2
+        surface: "무대야"
+        dictionary: "무대"
+        type: noun
+        meanings:
+          ja: "舞台 / ステージ"
+        grammar_notes:
+          ja: "무대 (舞台) + 야 (〜だ・タメ口)"
+        space_after: false
+
+  - id: p96
+    korean: "목이 다 쉬었어"
+    translations:
+      ja:
+        intent: "声がすっかり枯れたよ。"
+        literal: "喉が全て枯れた。"
+    blocks:
+      - id: p96_b1
+        surface: "목이"
+        dictionary: "목"
+        type: noun
+        meanings:
+          ja: "首 / 喉"
+        grammar_notes:
+          ja: "목 (喉) + 이 (主格助詞・〜が)"
+        space_after: true
+      - id: p96_b2
+        surface: "다"
+        dictionary: "다"
+        type: adverb
+        meanings:
+          ja: "全て / すっかり"
+        space_after: true
+      - id: p96_b3
+        surface: "쉬었어"
+        dictionary: "쉬다"
+        type: verb
+        meanings:
+          ja: "かすれる / (声が)枯れる"
+        grammar_notes:
+          ja: "쉬다 + 었어 (過去形・タメ口) ※休むと同音異義語"
+        space_after: false
+
+  - id: p97
+    korean: "막방이라니 아쉬워"
+    translations:
+      ja:
+        intent: "マッパンだなんて寂しい。"
+        literal: "最後の放送だなんて名残惜しい。"
+    blocks:
+      - id: p97_b1
+        surface: "막방이라니"
+        dictionary: "막방"
+        type: noun
+        meanings:
+          ja: "マッパン (最後の放送の略)"
+        grammar_notes:
+          ja: "막방 (マッパン) + 이라니 (〜だなんて)"
+        space_after: true
+      - id: p97_b2
+        surface: "아쉬워"
+        dictionary: "아쉽다"
+        type: adjective
+        meanings:
+          ja: "名残惜しい / 残念だ / 寂しい"
+        grammar_notes:
+          ja: "ㅂ変則活用 (아쉽다 + 어 -> 아쉬워)"
+        space_after: false
+
+  - id: p98
+    korean: "다음 주에 또 봐요"
+    translations:
+      ja:
+        intent: "来週また会いましょう。"
+        literal: "来週また会いましょう。"
+    blocks:
+      - id: p98_b1
+        surface: "다음"
+        dictionary: "다음"
+        type: noun
+        meanings:
+          ja: "次"
+        space_after: true
+      - id: p98_b2
+        surface: "주에"
+        dictionary: "주"
+        type: noun
+        meanings:
+          ja: "週"
+        grammar_notes:
+          ja: "주 (週) + 에 (助詞・〜に)"
+        space_after: true
+      - id: p98_b3
+        surface: "또"
+        dictionary: "또"
+        type: adverb
+        meanings:
+          ja: "また"
+        space_after: true
+      - id: p98_b4
+        surface: "봐요"
+        dictionary: "보다"
+        type: verb
+        meanings:
+          ja: "見る / 会う"
+        grammar_notes:
+          ja: "보다 + 아요 (丁寧語の勧誘/挨拶)"
+        space_after: false
+
+  - id: p99
+    korean: "집업 후드 샀어"
+    translations:
+      ja:
+        intent: "ジップアップパーカー買ったよ。"
+        literal: "ジップアップフード買った。"
+    blocks:
+      - id: p99_b1
+        surface: "집업"
+        dictionary: "집업"
+        type: noun
+        meanings:
+          ja: "ジップアップ (ZIP-UP)"
+        space_after: true
+      - id: p99_b2
+        surface: "후드"
+        dictionary: "후드"
+        type: noun
+        meanings:
+          ja: "パーカー / フード"
+        space_after: true
+      - id: p99_b3
+        surface: "샀어"
+        dictionary: "사다"
+        type: verb
+        meanings:
+          ja: "買う"
+        grammar_notes:
+          ja: "사다 + 았어 (過去形・タメ口)"
+        space_after: false
+
+  - id: p100
+    korean: "영원히 응원할게"
+    translations:
+      ja:
+        intent: "永遠に応援するね。"
+        literal: "永遠に応援するね。"
+    blocks:
+      - id: p100_b1
+        surface: "영원히"
+        dictionary: "영원히"
+        type: adverb
+        meanings:
+          ja: "永遠に"
+        space_after: true
+      - id: p100_b2
+        surface: "응원할게"
+        dictionary: "응원하다"
+        type: verb
+        meanings:
+          ja: "応援する"
+        grammar_notes:
+          ja: "응원하다 + ㄹ게 (意志・約束の〜するね)"
+        space_after: false
