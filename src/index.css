@@ -634,14 +634,22 @@ body {
     color: #0f1115;
 }
 
-.audio-control-btn.stop {
-    color: #f87171;
-    border-color: rgba(248, 113, 113, 0.3);
+.audio-control-btn.back {
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
-.audio-control-btn.stop:hover {
-    background: #f87171;
-    color: #0f1115;
+.audio-control-btn.back:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.audio-control-btn.back:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
 }
 
 
@@ -673,13 +681,99 @@ body {
     cursor: not-allowed;
 }
 
-.pagination-info {
+.pagination-info-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pagination-info-btn {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-muted);
     background: rgba(0, 0, 0, 0.2);
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.pagination-info-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.page-selector-popover {
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--panel-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 15px 40px -10px rgba(0, 0, 0, 0.8);
+    z-index: 1001;
+    min-width: 250px;
+    max-width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.page-selector-popover::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--panel-bg) transparent transparent transparent;
+}
+
+.page-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.page-select-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    padding: 0.75rem 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-select-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.page-select-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.page-selector-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: transparent;
 }
 
 /* Audio Buttons & Animations */
@@ -853,6 +947,62 @@ body {
 .cross-ref-trans {
     color: var(--text-muted);
     font-size: 1.05rem;
+}
+
+/* Cross-Ref Modal Enhancements */
+.modal-loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    gap: 1.5rem;
+    color: var(--text-muted);
+}
+
+.modal-loading-state .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.cross-ref-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.module-badge {
+    background: rgba(59, 130, 246, 0.1); /* Based on --accent #3b82f6 */
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.source-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.cross-ref-item.local-result {
+    border-left: 3px solid var(--accent);
+    padding-left: calc(1.25rem - 3px);
 }
 
 /* ==========================================

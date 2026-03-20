@@ -4,6 +4,30 @@ import './index.css'
 // Resolve data path relative to Vite's base URL
 const BASE = import.meta.env.BASE_URL
 
+// Helper hook for Local Storage persistence
+function useLocalStorage(key, initialValue) {
+    const [storedValue, setStoredValue] = useState(() => {
+        try {
+            const item = window.localStorage.getItem(key);
+            return item ? JSON.parse(item) : initialValue;
+        } catch (error) {
+            console.warn(`Error reading localStorage key "${key}":`, error);
+            return initialValue;
+        }
+    });
+
+    const setValue = value => {
+        try {
+            const valueToStore = value instanceof Function ? value(storedValue) : value;
+            setStoredValue(valueToStore);
+            window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        } catch (error) {
+            console.warn(`Error setting localStorage key "${key}":`, error);
+        }
+    };
+    return [storedValue, setValue];
+}
+
 function App() {
     // ==========================================
     // APP-LEVEL STATE
@@ -18,18 +42,19 @@ function App() {
     // ==========================================
     // SETTINGS STATE
     // ==========================================
-    const [lang, setLang] = useState('ja')
-    const [transType, setTransType] = useState('intent')
-    const [showColors, setShowColors] = useState(true)
+    const [lang, setLang] = useLocalStorage('kor_lang', 'ja')
+    const [transType, setTransType] = useLocalStorage('kor_transType', 'intent')
+    const [showColors, setShowColors] = useLocalStorage('kor_showColors', true)
     const [activeWordId, setActiveWordId] = useState(null)
 
     // Audio Config
-    const [audioSpeed, setAudioSpeed] = useState(0.85)
-    const [transitionDelay, setTransitionDelay] = useState(1.0)
-    const [autoFlipPage, setAutoFlipPage] = useState(false)
+    const [audioSpeed, setAudioSpeed] = useLocalStorage('kor_audioSpeed', 0.85)
+    const [transitionDelay, setTransitionDelay] = useLocalStorage('kor_transitionDelay', 1.0)
+    const [autoFlipPage, setAutoFlipPage] = useLocalStorage('kor_autoFlipPage', false)
 
     // Pagination
     const [currentPage, setCurrentPage] = useState(1)
+    const [showPageSelector, setShowPageSelector] = useState(false)
     const itemsPerPage = 10
 
     // Selected Phrase (Right Pane synchronization)
@@ -64,7 +89,7 @@ function App() {
             })
     }, [])
 
-    const loadModule = async (moduleId) => {
+    const loadModule = async (moduleId, targetPhraseId = null) => {
         setLoading(true)
         setError(null)
         try {
@@ -72,8 +97,22 @@ function App() {
             if (!res.ok) throw new Error(`Failed to load module "${moduleId}" (${res.status})`)
             const data = await res.json()
             setLoadedModule(data)
-            setCurrentPage(1)
-            setSelectedPhraseId(data.phrases?.[0]?.id || null)
+            
+            if (targetPhraseId) {
+                const phraseIndex = data.phrases.findIndex(p => p.id === targetPhraseId)
+                if (phraseIndex !== -1) {
+                    const targetPage = Math.ceil((phraseIndex + 1) / itemsPerPage)
+                    setCurrentPage(targetPage)
+                    setSelectedPhraseId(targetPhraseId)
+                } else {
+                    setCurrentPage(1)
+                    setSelectedPhraseId(data.phrases?.[0]?.id || null)
+                }
+            } else {
+                setCurrentPage(1)
+                setSelectedPhraseId(data.phrases?.[0]?.id || null)
+            }
+            
             setView('study')
         } catch (err) {
             console.error(err)
@@ -97,26 +136,82 @@ function App() {
     // Auto-select the first phrase of a new page when navigating
     useEffect(() => {
         if (currentPhrases.length > 0 && view === 'study') {
-            setSelectedPhraseId(currentPhrases[0].id)
+            // Only auto-select first phrase if current selection is NOT on the current page
+            const isSelectedOnPage = currentPhrases.some(p => p.id === selectedPhraseId)
+            if (!isSelectedOnPage) {
+                setSelectedPhraseId(currentPhrases[0].id)
+            }
         }
-    }, [currentPage, currentPhrases, view])
+    }, [currentPage, currentPhrases, view, selectedPhraseId])
 
     const selectedPhrase = useMemo(() => {
         return phrases.find(p => p.id === selectedPhraseId) || null
     }, [selectedPhraseId, phrases])
 
-    // Cross Ref — use search index for cross-module lookup
-    const crossRefPhrases = useMemo(() => {
-        if (!crossRefWord || !searchIndex) return []
+    // ==========================================
+    // CROSS-MODULE LOOKUP
+    // ==========================================
+    const [crossRefData, setCrossRefData] = useState([])
+    const [crossRefLoading, setCrossRefLoading] = useState(false)
+
+    useEffect(() => {
+        if (!crossRefWord || !searchIndex) {
+            setCrossRefData([])
+            return
+        }
+
         const locations = searchIndex[crossRefWord] || []
-        // For now, only show results from the currently loaded module
-        // (fetching other modules on-demand could be a future enhancement)
-        if (!loadedModule) return []
-        const localPhraseIds = locations
-            .filter(loc => loc.module_id === loadedModule.id)
-            .map(loc => loc.phrase_id)
-        return phrases.filter(p => localPhraseIds.includes(p.id))
-    }, [crossRefWord, searchIndex, loadedModule, phrases])
+        if (locations.length === 0) {
+            setCrossRefData([])
+            return
+        }
+
+        const fetchCrossRefData = async () => {
+            setCrossRefLoading(true)
+            try {
+                const uniqueModuleIds = [...new Set(locations.map(loc => loc.module_id))]
+                
+                const allResults = await Promise.all(uniqueModuleIds.map(async (mid) => {
+                    let mData;
+                    if (loadedModule && loadedModule.id === mid) {
+                        mData = loadedModule
+                    } else {
+                        const res = await fetch(`${BASE}data/modules/${mid}.json`)
+                        if (!res.ok) return null
+                        mData = await res.json()
+                    }
+
+                    const relevantIds = locations
+                        .filter(loc => loc.module_id === mid)
+                        .map(loc => loc.phrase_id)
+
+                    return mData.phrases
+                        .filter(p => relevantIds.includes(p.id))
+                        .map(p => ({
+                            ...p,
+                            module_id: mid,
+                            module_title: mData.title,
+                            index: mData.phrases.findIndex(item => item.id === p.id) + 1
+                        }))
+                }))
+
+                // Flat and sort: put local module results first
+                const flattened = allResults.filter(Boolean).flat()
+                const sorted = flattened.sort((a, b) => {
+                    if (a.module_id === loadedModule?.id) return -1
+                    if (b.module_id === loadedModule?.id) return 1
+                    return 0
+                })
+                setCrossRefData(sorted)
+            } catch (err) {
+                console.error("Cross-Ref Fetch Error:", err)
+            } finally {
+                setCrossRefLoading(false)
+            }
+        }
+
+        fetchCrossRefData()
+    }, [crossRefWord, searchIndex, loadedModule])
 
     // ==========================================
     // HELPERS
@@ -162,6 +257,7 @@ function App() {
     const playQueueRef = useRef([])
     const isPlayingThroughRef = useRef(false)
     const timeoutRef = useRef(null)
+    const activeUtteranceRef = useRef(null) // Added to ignore async ghost cancel events
 
     useEffect(() => {
         const loadVoices = () => {
@@ -192,15 +288,32 @@ function App() {
 
     const playSinglePhrase = (e, phraseId, phraseBlocks) => {
         e?.stopPropagation()
+        setSelectedPhraseId(phraseId)
+        activeUtteranceRef.current = null
         window.speechSynthesis.cancel()
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
         stopPlayThrough()
         const fullText = phraseBlocks.map(b => b.surface).join(' ')
-        const utterance = createUtterance(fullText)
-        utterance.onstart = () => setActivePlayingId(phraseId)
-        utterance.onend = () => setActivePlayingId(null)
-        utterance.onerror = () => setActivePlayingId(null)
-        window.speechSynthesis.speak(utterance)
+
+        // Small delay fix for sluggishness/mid-sentence cutoff in some browsers
+        setTimeout(() => {
+            const utteranceId = Symbol()
+            activeUtteranceRef.current = utteranceId
+
+            const utterance = createUtterance(fullText)
+            utterance.onstart = () => {
+                if (activeUtteranceRef.current === utteranceId) setActivePlayingId(phraseId)
+            }
+            utterance.onend = () => {
+                if (activeUtteranceRef.current === utteranceId) setActivePlayingId(null)
+            }
+            utterance.onerror = (e) => {
+                if (activeUtteranceRef.current === utteranceId && e.error !== 'canceled' && e.error !== 'interrupted') {
+                    setActivePlayingId(null)
+                }
+            }
+            window.speechSynthesis.speak(utterance)
+        }, 10)
     }
 
     const isAutoFlippingRef = useRef(false)
@@ -212,7 +325,11 @@ function App() {
             isAutoFlippingRef.current = false
             setTimeout(() => {
                 if (isPlayingThroughRef.current) {
-                    const queueItems = currentPhrases.map(p => ({
+                    // Find starting index on the new page
+                    let startIndex = currentPhrases.findIndex(p => p.id === selectedPhraseId)
+                    if (startIndex === -1) startIndex = 0
+
+                    const queueItems = currentPhrases.slice(startIndex).map(p => ({
                         id: p.id,
                         text: p.blocks.map(b => b.surface).join(' ')
                     }))
@@ -224,12 +341,18 @@ function App() {
     }, [currentPage, view])
 
     const startPlayThrough = () => {
+        activeUtteranceRef.current = null
         window.speechSynthesis.cancel()
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
         setIsPlayingThrough(true)
         setIsPaused(false)
         isPlayingThroughRef.current = true
-        const queueItems = currentPhrases.map(p => ({
+
+        // Find starting index based on selected phrase
+        let startIndex = currentPhrases.findIndex(p => p.id === selectedPhraseId)
+        if (startIndex === -1) startIndex = 0
+
+        const queueItems = currentPhrases.slice(startIndex).map(p => ({
             id: p.id,
             text: p.blocks.map(b => b.surface).join(' ')
         }))
@@ -250,21 +373,37 @@ function App() {
         }
         const { id, text } = playQueueRef.current.shift()
         setSelectedPhraseId(id)
-        const utterance = createUtterance(text)
-        utterance.onstart = () => setActivePlayingId(id)
-        utterance.onend = () => {
-            setActivePlayingId(null)
-            if (isPlayingThroughRef.current) {
-                timeoutRef.current = setTimeout(() => {
-                    playNextInQueue()
-                }, transitionDelay * 1000)
+
+        // Ensure buffer reset before starting the next playback
+        activeUtteranceRef.current = null
+        window.speechSynthesis.cancel()
+        setTimeout(() => {
+            if (!isPlayingThroughRef.current) return;
+            const utteranceId = Symbol()
+            activeUtteranceRef.current = utteranceId
+
+            const utterance = createUtterance(text)
+            utterance.onstart = () => {
+                if (activeUtteranceRef.current === utteranceId) setActivePlayingId(id)
             }
-        }
-        utterance.onerror = (e) => {
-            console.error("Speech Synthesis Error:", e)
-            stopPlayThrough()
-        }
-        window.speechSynthesis.speak(utterance)
+            utterance.onend = () => {
+                if (activeUtteranceRef.current !== utteranceId) return;
+                setActivePlayingId(null)
+                if (isPlayingThroughRef.current) {
+                    timeoutRef.current = setTimeout(() => {
+                        playNextInQueue()
+                    }, transitionDelay * 1000)
+                }
+            }
+            utterance.onerror = (e) => {
+                if (activeUtteranceRef.current !== utteranceId) return;
+                console.error("Speech Synthesis Error:", e)
+                if (e.error !== 'canceled' && e.error !== 'interrupted') {
+                    stopPlayThrough()
+                }
+            }
+            window.speechSynthesis.speak(utterance)
+        }, 10)
     }
 
     const pausePlayThrough = () => {
@@ -283,6 +422,7 @@ function App() {
     }
 
     const stopPlayThrough = () => {
+        activeUtteranceRef.current = null
         window.speechSynthesis.cancel()
         if (timeoutRef.current) clearTimeout(timeoutRef.current)
         setIsPlayingThrough(false)
@@ -293,10 +433,61 @@ function App() {
         isAutoFlippingRef.current = false
     }
 
+    const playPreviousPhrase = () => {
+        const fullIndex = phrases.findIndex(p => p.id === selectedPhraseId)
+        if (fullIndex <= 0) return
+
+        const prevPhrase = phrases[fullIndex - 1]
+        const targetPage = Math.ceil((fullIndex) / itemsPerPage)
+
+        const pageChanged = targetPage !== currentPage
+        const wasPlaying = isPlayingThroughRef.current
+
+        // Temporarily clear out current playing events
+        activeUtteranceRef.current = null
+        window.speechSynthesis.cancel()
+        if (timeoutRef.current) clearTimeout(timeoutRef.current)
+
+        if (pageChanged) {
+            if (wasPlaying) {
+                isAutoFlippingRef.current = true
+            }
+            setCurrentPage(targetPage)
+        }
+
+        setSelectedPhraseId(prevPhrase.id)
+
+        // If already playing, we restart the queue explicitly
+        if (wasPlaying) {
+            setIsPlayingThrough(true)
+            setIsPaused(false)
+            isPlayingThroughRef.current = true
+
+            // If page didn't change, we must manually restart the queue 
+            // since the useEffect won't trigger.
+            if (!pageChanged) {
+                const startIndexInPage = (fullIndex - 1) % itemsPerPage
+                const phrasesOnTargetPage = phrases.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
+
+                const queueItems = phrasesOnTargetPage.slice(startIndexInPage).map(p => ({
+                    id: p.id,
+                    text: p.blocks.map(b => b.surface).join(' ')
+                }))
+
+                playQueueRef.current = queueItems
+                setTimeout(() => {
+                    if (isPlayingThroughRef.current) playNextInQueue()
+                }, 50)
+            }
+            // If page DID change, the useEffect will handle it after the 500ms delay
+        }
+    }
+
     const goBackToHub = () => {
         stopPlayThrough()
         setLoadedModule(null)
         setView('hub')
+        setShowPageSelector(false)
     }
 
     // ==========================================
@@ -626,9 +817,18 @@ function App() {
                         <div className="pagination-bar">
                             {/* PLAY THROUGH CONTROLS */}
                             <div className="audio-controls">
+                                <button
+                                    className="audio-control-btn back"
+                                    onClick={playPreviousPhrase}
+                                    disabled={phrases.findIndex(p => p.id === selectedPhraseId) <= 0}
+                                    title="Back to previous phrase"
+                                >
+                                    ⏮
+                                </button>
+
                                 {!isPlayingThrough ? (
                                     <button className="audio-control-btn play" onClick={startPlayThrough}>
-                                        ▶ Play Page
+                                        ▶ Play Through
                                     </button>
                                 ) : (
                                     <>
@@ -641,9 +841,7 @@ function App() {
                                                 ⏸ Pause
                                             </button>
                                         )}
-                                        <button className="audio-control-btn stop" onClick={stopPlayThrough}>
-                                            ⏹ Stop
-                                        </button>
+                                        {/* Stop button removed per user request */}
                                     </>
                                 )}
                             </div>
@@ -657,7 +855,37 @@ function App() {
                             >
                                 ← Previous
                             </button>
-                            <span className="pagination-info">Page {currentPage} of {totalPages}</span>
+                            <div className="pagination-info-wrapper">
+                                <button
+                                    className="pagination-info-btn"
+                                    onClick={() => setShowPageSelector(!showPageSelector)}
+                                    title="Jump to page"
+                                >
+                                    Page {currentPage} of {totalPages}
+                                </button>
+
+                                {showPageSelector && (
+                                    <>
+                                        <div className="page-selector-overlay" onClick={() => setShowPageSelector(false)}></div>
+                                        <div className="page-selector-popover">
+                                            <div className="page-selector-grid">
+                                                {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
+                                                    <button
+                                                        key={p}
+                                                        className={`page-select-btn ${p === currentPage ? 'active' : ''}`}
+                                                        onClick={() => {
+                                                            setCurrentPage(p)
+                                                            setShowPageSelector(false)
+                                                        }}
+                                                    >
+                                                        {p}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+                            </div>
                             <button
                                 className="pagination-btn"
                                 disabled={currentPage === totalPages}
@@ -683,30 +911,38 @@ function App() {
                         </div>
 
                         <div className="modal-body">
-                            {crossRefPhrases.length === 0 ? (
+                            {crossRefLoading ? (
+                                <div className="modal-loading-state">
+                                    <div className="loading-spinner"></div>
+                                    <p>{lang === 'ja' ? '全プレイリストを検索中...' : 'Searching all playlists...'}</p>
+                                </div>
+                            ) : crossRefData.length === 0 ? (
                                 <div style={{ color: 'var(--text-muted)', padding: '1rem' }}>
-                                    {lang === 'ja' ? 'このプレイリスト内に他の例文が見つかりませんでした。' : 'No other examples found in this playlist.'}
+                                    {lang === 'ja' ? '該当する例文が見つかりませんでした。' : 'No examples found across all playlists.'}
                                 </div>
                             ) : (
-                                crossRefPhrases.map((phrase) => {
-                                    const phraseIndex = phrases.findIndex(p => p.id === phrase.id) + 1
+                                crossRefData.map((phrase) => {
+                                    const isLocal = phrase.module_id === loadedModule?.id
                                     return (
                                         <div
-                                            key={`modal-${phrase.id}`}
-                                            className="cross-ref-item"
+                                            key={`modal-${phrase.module_id}-${phrase.id}`}
+                                            className={`cross-ref-item ${isLocal ? 'local-result' : ''}`}
                                             style={{ cursor: 'pointer' }}
                                             onClick={() => {
-                                                const targetPage = Math.ceil(phraseIndex / itemsPerPage)
-                                                setCurrentPage(targetPage)
-                                                setSelectedPhraseId(phrase.id)
+                                                loadModule(phrase.module_id, phrase.id)
                                                 setCrossRefWord(null)
                                             }}
                                         >
+                                            {!isLocal && (
+                                                <div className="cross-ref-meta">
+                                                    <span className="module-badge">{phrase.module_title}</span>
+                                                </div>
+                                            )}
                                             <div className="cross-ref-phrase korean-text">
-                                                <span className="phrase-number" style={{ width: 'auto', marginRight: '0.75rem', opacity: 0.5 }}>{phraseIndex}.</span>
+                                                <span className="phrase-number" style={{ opacity: 0.5, marginRight: '0.75rem', fontSize: '0.9rem' }}>{phrase.index}.</span>
                                                 {phrase.blocks.map(b => (
                                                     <span
-                                                        key={`m-${b.id}`}
+                                                        key={`m-${phrase.module_id}-${b.id}`}
                                                         style={{
                                                             color: b.dictionary === crossRefWord ? 'var(--accent)' : 'inherit',
                                                             fontWeight: b.dictionary === crossRefWord ? 'bold' : 'normal',
